@@ -1,0 +1,12 @@
+:: StoryData
+{
+	"ifid": "3B47B1E2-3595-4D88-8FCA-1400F3C4E4A3",
+    "format": "SugarCube",
+    "format-version": "2.36.1"
+}
+
+:: StoryTitle
+"Furry Horror Novel"
+
+:: Start
+""
