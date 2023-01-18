@@ -6,7 +6,61 @@
 }
 
 :: StoryTitle
-"Furry Horror Novel"
+"FNG prologue"
 
 :: Start
-""
+    player-thinking "I stared blankly at the colorful costiumes of the actors on the stage. I could not help but stare with dread at their 'cute' faces..."
+
+[[Ch0_Gym_Sc1_SceneStaring1]]
+
+:: Ch0_Gym_Sc1_SceneStaring1
+    narrator "Today is when play about Japanese mithology was scheduled. Students prepared various furry costumes representing typical Japanese spirits."
+
+[[Ch0_Gym_Sc1_SceneStaring2Fox]]
+
+:: Ch0_Gym_Sc1_SceneStaring2Fox
+    narrator "Fox representing trickery and deceit. His ability to shapeshift into anything or anyone he desires may decieve even the best observers."
+
+[[Ch0_Gym_Sc1_SceneStaring2Bunny]]
+
+:: Ch0_Gym_Sc1_SceneStaring2Bunny
+    narrator "Bunny who bit the Moon and changed its shape to a croussaint then provided people with medicine out of moondust. {i}His benevolence knew no bounds.{/i}"
+
+[[Ch0_Gym_Sc1_SceneStaring2BunnyReaction]]
+
+:: Ch0_Gym_Sc1_SceneStaring2BunnyReaction
+    player-thinking "Yeah, for sure he won't hestitate to taste a human flesh."
+
+[[Ch0_Gym_Sc1_SceneStaring2Weasel]]
+
+:: Ch0_Gym_Sc1_SceneStaring2Weasel
+    narrator "Weasel who is believed to trip people. Actually, there are two more of them: one of which wounds you and the other heals you"
+
+[[Ch0_Gym_Sc1_SceneStaring2WeaselReaction]]
+
+:: Ch0_Gym_Sc1_SceneStaring2WeaselReaction
+    player-thinking "'Course, they had to choose the deadliest one... As if their bare existance wasn't enough."
+
+[[Ch0_Gym_Sc1_SceneStaring2Wolf]]
+
+:: Ch0_Gym_Sc1_SceneStaring2Wolf
+    narrator "Wolf being the one of the protective spirits that deters malicious spirits, but will turn on you the moment you make a mistake."
+
+[[Ch0_Gym_Sc1_SceneStaring3]]
+
+:: Ch0_Gym_Sc1_SceneStaring3
+    player-thinking "I wonder how people find these costumes cute... or anything. Anything besides frightening."
+
+[[Ch0_Gym_Sc1_SceneStaring3More]]
+
+:: Ch0_Gym_Sc1_SceneStaring3More
+    player-thinking "If I were to stand close to that terrifying abominations I would probably die of a heart attack..."
+
+[[Ch0_Gym_Sc1_SceneStaring3MoreMore]]
+
+:: Ch0_Gym_Sc1_SceneStaring3MoreMore
+    player-thinking "Just thinking about their fur gives me the shivers."
+
+[[Ch0_Gym_Sc2_Stageplay]]
+
+:: Ch0_Gym_Sc2_Stageplay
