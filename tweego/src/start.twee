@@ -78,7 +78,7 @@ player "Whoah... What was that?!"
 
 narrator "People around turn to look at you as you are yelling these words."
 
-player-thinking "Did I just... Did I just yell? What the hell was that. Have others seen it too?"
+player-thinking "Did I just... Did I just yell? What the hell was that?! Have others seen it too?"
 
 narrator "You start sweating after you realised that you cought the attention of students around you."
 
@@ -88,17 +88,78 @@ narrator "You begin to shoulder your way through the crowd towards the exit of t
 
 narrator "You reach the door leading to a hallway. You open them and walk through."
 
-[[Ch0_Hallway_Sc1_PlayerGoesToTheToilets]]
+[[Ch0_Hallway_Sc1_PlayerGoesToTheToilets]] 
 
 
-:: Ch0_Hallway_Sc1_PlayerGoesToTheToilets {"position":"100,300","size":"100,100"}
+:: Ch0_Hallway_Sc1_PlayerGoesToTheToilets {"position":"100,300","size":"100,100"} 
+
+narrator "You are wandering the hollway that, despite the ongoing show, is crowded with people."
+
+narrator "Those people seem to be interested in your person and you can feel thier piercing eyes on you."
+
+narrator "However, everyone is occupied with their struggles, noone glances at you."
+
+narrator "Despite all that you try to pass the hallway without attracting any attention as you are terrified of their deadly stares."
+
+narrator "Passing by the two students, no more than a year older than you, you can overhear their conversation."
+
+student1 "My beloved father presented us with another domestic violence show last night. Damn drunk..."
+
+student2 "Such behavior is inappropriate! He should consider his acctions and you should talk to him about that!"
+
+student1 "I do not intend to speak to him anymore. And he'll have enough time to think while he rots in jail!"
+
+student1 "That's the third time he hit my mom, I called the police and they took him away. They say he won't come out anytime soon."
+
+player-thinking "Hmm... So third time lucky..."
+
+narrator "This conversation somehow made you more anxious. Shivers run down your spine as you hasten your steps."
+
+narrator "Finally, after mentally exhausting journey to the toilet, you reach the place."
+
 [[Ch0_ToiletStall_Sc1_PlayerTakeAPause]]
 
 
 :: Ch0_ToiletStall_Sc1_PlayerTakeAPause {"position":"100,425","size":"100,100"}
+
+# Black screen - the transition between the corridor and bathroom stall - omitting the Toilets scene
+narrator "Those toilets are always cold and too filthy to be used. They disgust you but it is the only safe place in this school."
+
+# In the toilet stall
+player-thinking "Those furry costumes... There is someting unsettling about them. I can't explain it tho..."
+
+player-thinking "People say that they look cute, some even fantasize about them... Bleh..."
+
+player-thinking "How people can say things like that?! Those are bloodthirsty monsters!"
+
+player "Fuck..."
+
+player-thinking "I need to get out! I can't stand this shit I need to get home and relax."
+
+player-thinking "But what will people think? They certainly will talk behind my back. They will call me coward!"
+
+player-thinking "Screw those people! What if the actors are on break and I'll bump into one of them wearing his suit?!"
+
+player-thinking "I can't get out now... But I have to..."
+
+narrator "Suddenly you feel nauseous. You can feel your guts trembling inside of you."
+
+narrator "You start to lose your breath as you feel unnaturall pressure on your lungs. Your throat feels squeezed as you desperately try to take a breath."
+
+player-thinking "Oh God... What do I do now..."
+
 [[Ch0_ToiletStall_Sc2_PlayerFaints]]
 
 
-:: Ch0_ToiletStall_Sc2_PlayerFaints {"position":"100,550","size":"100,100"}
+:: Ch0_ToiletStall_Sc2_PlayerFaints [doc_break] {"position":"100,550","size":"100,100"}
 
+narrator "Suddenly, you hear the door opening. Quiet footsteps can be heard outside the stall."
+
+narrator "You notice a shadow of a person under the door. Every part of your body starts to ache in fear."
+
+mysterious-person "Hello? Is anybody in there?"
+
+narrator "Hearing this calm, yet unsettling voice, you feel your consciousness fading."
+
+ [[Ch1_ToiletStall_Sc1_PlayerWakesUp]]
 
