@@ -1,66 +1,104 @@
-:: StoryData
-{
-	"ifid": "3B47B1E2-3595-4D88-8FCA-1400F3C4E4A3",
-    "format": "SugarCube",
-    "format-version": "2.36.1"
-}
-
 :: StoryTitle
 "FNG prologue"
 
-:: Start
-    player-thinking "I stared blankly at the colorful costiumes of the actors on the stage. I could not help but stare with dread at their 'cute' faces..."
 
-[[Ch0_Gym_Sc1_SceneStaring1]]
+:: StoryData
+{
+	"ifid": "3B47B1E2-3595-4D88-8FCA-1400F3C4E4A3",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start",
+	"zoom": 1
+}
 
-:: Ch0_Gym_Sc1_SceneStaring1
-    narrator "Today is when play about Japanese mithology was scheduled. Students prepared various furry costumes representing typical Japanese spirits."
 
-[[Ch0_Gym_Sc1_SceneStaring2Fox]]
+:: Start {"position":"100,0","size":"100,100"}
+player-thinking "I stared blankly at the colorful costiumes of the actors on the stage. I could not help but stare with dread at their 'cute' faces..."
 
-:: Ch0_Gym_Sc1_SceneStaring2Fox
-    narrator "Fox representing trickery and deceit. His ability to shapeshift into anything or anyone he desires may decieve even the best observers."
+[[Ch0_Gym_Sc1_PlayerStaresAtTheStage]]
 
-[[Ch0_Gym_Sc1_SceneStaring2Bunny]]
 
-:: Ch0_Gym_Sc1_SceneStaring2Bunny
-    narrator "Bunny who bit the Moon and changed its shape to a croussaint then provided people with medicine out of moondust. {i}His benevolence knew no bounds.{/i}"
+:: Ch0_Gym_Sc1_PlayerStaresAtTheStage {"position":"225,75","size":"100,100"}
+narrator "Today is when play about Japanese mithology was scheduled. Students prepared various furry costumes representing typical Japanese spirits."
 
-[[Ch0_Gym_Sc1_SceneStaring2BunnyReaction]]
+narrator "Fox represents trickery and deceit. His ability to shapeshift into anything or anyone he desires may decieve even the best observers."
 
-:: Ch0_Gym_Sc1_SceneStaring2BunnyReaction
-    player-thinking "Yeah, for sure he won't hestitate to taste a human flesh."
+narrator "Bunny, who bit the Moon and changed its shape to a croussaint then provided people with medicine out of moondust. {i}His benevolence knew no bounds.{/i}"
 
-[[Ch0_Gym_Sc1_SceneStaring2Weasel]]
+player-thinking "Yeah, for sure he won't hestitate to taste a human flesh."
 
-:: Ch0_Gym_Sc1_SceneStaring2Weasel
-    narrator "Weasel who is believed to trip people. Actually, there are two more of them: one of which wounds you and the other heals you"
+narrator "Weasel, who is believed to trip people. Actually, there are two more of them: one of which wounds you and the other heals you."
 
-[[Ch0_Gym_Sc1_SceneStaring2WeaselReaction]]
+player-thinking "'Course, they had to choose the deadliest one... As if their bare existance wasn't enough."
 
-:: Ch0_Gym_Sc1_SceneStaring2WeaselReaction
-    player-thinking "'Course, they had to choose the deadliest one... As if their bare existance wasn't enough."
+narrator "Wolf being the one of the protective spirits that deters malicious spirits, but will turn on you the moment you make a mistake."
 
-[[Ch0_Gym_Sc1_SceneStaring2Wolf]]
+player-thinking "I wonder how people find these costumes cute... or anything. Anything besides frightening."
 
-:: Ch0_Gym_Sc1_SceneStaring2Wolf
-    narrator "Wolf being the one of the protective spirits that deters malicious spirits, but will turn on you the moment you make a mistake."
+player-thinking "If I were to stand close to that terrifying abominations I would probably die of a heart attack..."
 
-[[Ch0_Gym_Sc1_SceneStaring3]]
+player-thinking "Just thinking about their fur gives me the shivers."
 
-:: Ch0_Gym_Sc1_SceneStaring3
-    player-thinking "I wonder how people find these costumes cute... or anything. Anything besides frightening."
-
-[[Ch0_Gym_Sc1_SceneStaring3More]]
-
-:: Ch0_Gym_Sc1_SceneStaring3More
-    player-thinking "If I were to stand close to that terrifying abominations I would probably die of a heart attack..."
-
-[[Ch0_Gym_Sc1_SceneStaring3MoreMore]]
-
-:: Ch0_Gym_Sc1_SceneStaring3MoreMore
-    player-thinking "Just thinking about their fur gives me the shivers."
 
 [[Ch0_Gym_Sc2_Stageplay]]
 
-:: Ch0_Gym_Sc2_Stageplay
+
+:: Ch0_Gym_Sc2_Stageplay {"position":"100,150","size":"100,100"}
+narrator "You try to look up to see what's happening in the stageplay. You respect the effort students put into making the play."
+
+narrator "It's just your unexplainable fear towards furry animals that makes you feel uncomfortable."
+
+player-thinking "I- I don't know why I am anxious about them... I just don't trust antropomorphic animals."
+
+narrator "Finally you are able to gaze at them.." 
+
+narrator "On the stage you may see the spirits sitting around a decoration that represents a small bonfire and having a chat."
+
+weasel-actor "*jiggle* I love tripping up humans, It's so easy to catch them off guard and make them stumble!"
+
+bunny-actor "Weasel, you should not take pleasure in hurting others. Humans are fragile creatures after all."
+
+wolf-actor "Humans are weak and vulnerable. They need protection, yet I would not hestitate to hurt them if they happened to slip *heckle*"
+
+fox-actress "My dear fellows, you all have your own unique ways of interacting with humans. I prefer to deceive them."
+
+fox-actress "I enjoy playing tricks on them, keep them humans on their toes. It makes it a way more interesting."
+
+weasel-actor "Oh Fox, you always know how to have fun..."
+
+weasel-actor "But we cannot forget, we must be careful not to harm them too much. We are spirits of the natuaral world and we are connected to them."
+
+bunny-actor "That's true, Weasel. *nodding* We should always strive to balance our actions and find a way to coexist with humans."
+
+[[Ch0_Gym_Sc3_PlayerHalucinate]]
+
+
+:: Ch0_Gym_Sc3_PlayerHalucinate {"position":"225,225","size":"100,100"}
+player "Whoah... What was that?!"
+
+narrator "People around turn to look at you as you are yelling these words."
+
+player-thinking "Did I just... Did I just yell? What the hell was that. Have others seen it too?"
+
+narrator "You start sweating after you realised that you cought the attention of students around you."
+
+player-thinking "I gotta hide. I need to take a breather."
+
+narrator "You begin to shoulder your way through the crowd towards the exit of the gym."
+
+narrator "You reach the door leading to a hallway. You open them and walk through."
+
+[[Ch0_Hallway_Sc1_PlayerGoesToTheToilets]]
+
+
+:: Ch0_Hallway_Sc1_PlayerGoesToTheToilets {"position":"100,300","size":"100,100"}
+[[Ch0_ToiletStall_Sc1_PlayerTakeAPause]]
+
+
+:: Ch0_ToiletStall_Sc1_PlayerTakeAPause {"position":"100,425","size":"100,100"}
+[[Ch0_ToiletStall_Sc2_PlayerFaints]]
+
+
+:: Ch0_ToiletStall_Sc2_PlayerFaints {"position":"100,550","size":"100,100"}
+
+
