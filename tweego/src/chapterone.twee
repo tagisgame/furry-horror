@@ -164,3 +164,24 @@ player_thinking "Or should I- go?"
 [[Leave the stall|Game_Toilets_Start]]
 
 :: Game_Toilets_Start
+
+narrator "As you step out of the stall you find yourself in the same filty restroom you entered before losing consciousness."
+
+narrator "You can feel some sort of unnatural aura. Unpleasant feeling that puts your instincts wary."
+
+player-thinking "Why is it so quiet here? (Coś w stylu, że nie słychać nawet background noise)"
+
+player-thinking "I should turn on the lights. "
+
+narrator “The moment you turned on the lights you witnessed a strange scenery. The entire restroom seemed to be covered in blood and a strange black goo."
+
+narrator "This vison lasted only a second, as your eyes got used to the light it all disappeared."
+
+player "WHAT THE HELL..."
+
+player-thinking "Am I going nuts? What the fuck was that?!"
+
+player-thinking "I didn't sign up for all that. My therapist said that it shouldn't happen again!"
+
+narrator "It took you a while to process this hallucination. You came to conclusion that it's all your brain tricks."
+
