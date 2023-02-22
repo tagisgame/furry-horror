@@ -1,0 +1,125 @@
+:: StoryTitle
+"FNG BUILDING GYM"
+
+
+:: StoryData
+{
+	"ifid": "655A7F04-86DC-4A33-AE8F-4A19C5EF007D",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start",
+	"tag-colors": {
+		"not_finished": "orange"
+	},
+	"zoom": 1
+}
+
+
+:: Start {"position":"1450,250","size":"100,100"}
+[[Game_BuildingGYM_Corridor_1G,BUILDING1ENTRANCE]]
+
+
+:: Game_BuildingGYM_Corridor_1G,BUILDING1ENTRANCE {"position":"1400,400","size":"100,100"}
+[[Go West|Game_BuildingGYM_Corridor_2G,CLKM,4G]]
+[[Enter the Main Building|Game_Building1_Corridor_GYMENTRANCE]]
+
+
+:: Game_BuildingGYM_Corridor_2G,CLKM,4G {"position":"900,400","size":"100,100"}
+[[Go North|Game_BuildingGYM_Corridor_4G,GYM]]
+[[Go East|Game_BuildingGYM_Corridor_1G,BUILDING1ENTRANCE]]
+[[Go West|Game_BuildingGYM_Corridor_CLKF,GYM]]
+
+[[Enter Room 2G|Game_BuildingGYM_2G]]
+[[Enter Male Cloakroom|Game_BuildingGYM_CLKM]]
+[[Enter Room 4G|Game_BuildingGYM_4G]]
+
+
+:: Game_BuildingGYM_Corridor_CLKF,GYM {"position":"600,400","size":"100,100"}
+[[Go East|Game_BuildingGYM_Corridor_2G,CLKM,4G]]
+[[Go West|Game_BuildingGYM_Corridor_3G]]
+[[Enter Female Cloakroom|Game_BuildingGYM_CLKF]]
+[[Enter Gym|Game_BuildingGYM_GYM]]
+
+
+:: Game_BuildingGYM_Corridor_3G {"position":"300,400","size":"100,100"}
+[[Go West|Game_BuildingGYM_Corridor_3G,GYM]]
+[[Go East|Game_BuildingGYM_Corridor_CLKF,GYM]]
+[[Enter room 3G|Game_BuildingGYM_3G]]
+
+
+:: Game_BuildingGYM_Corridor_3G,GYM {"position":"0,400","size":"100,100"}
+[[Go West|Game_BuildingGYM_Corridor_3G]]
+[[Enter room 3G|Game_BuildingGYM_3G]]
+[[Enter Gym|Game_BuildingGYM_GYM]]
+
+
+:: Game_BuildingGYM_Corridor_4G,GYM {"position":"900,100","size":"100,100"}
+[[Go South|Game_BuildingGYM_Corridor_2G,CLKM,4G]]
+[[Enter Room 4G|Game_BuildingGYM_4G]]
+[[Enter Gym|Game_BuildingGYM_GYM]]
+
+
+:: Game_BuildingGYM_4G {"position":"1050,125","size":"100,100"}
+narrator "You enter the room labeled 4G."
+
+<<if $visited_4G isnot True>>
+	narrator "At first glance, you see many excersise mats laying across the floor and being stacked before the wall."
+    
+	player-thinking "This room is used for fitness classess."
+    
+    player-thinking "They take place once every week and most of my classmates hates them."
+    
+    player-thinking "I wonder if they actually care about their physique..."
+    
+    player-thinking "Fitness is very good for our health, I'm glad I enjoy these classes."
+    
+<</if>>
+narrator "You walk towards the center of the room avoiding the mats on the floor, and you find a clear spot in the middle."
+
+narrator "You can see every corner of the room now, what are you going to do?"
+
+[[Look around.|Game_BuildingGYM_4G_LookAround]]
+[[Leave the room|Game_BuildingGYM_4G_Leaving]]
+
+
+:: Game_BuildingGYM_2G {"position":"1050,550","size":"100,100"}
+[[Leave Room|Game_BuildingGYM_Corridor_2G,CLKM,4G]]
+
+
+:: Game_BuildingGYM_CLKM {"position":"750,550","size":"100,100"}
+[[Leave room|Game_BuildingGYM_Corridor_2G,CLKM,4G]]
+
+
+:: Game_BuildingGYM_GYM {"position":"750,150","size":"100,100"}
+[[Leave through the North-Eastern door|Game_BuildingGYM_Corridor_4G,GYM]]
+[[Leave through the South-Eastern door|Game_BuildingGYM_Corridor_CLKF,GYM]]
+[[Leave through the South-Western door|Game_BuildingGYM_Corridor_3G,GYM]]
+
+
+:: Game_BuildingGYM_CLKF {"position":"550,550","size":"100,100"}
+[[Leave room|Game_BuildingGYM_Corridor_CLKF,GYM]]
+
+
+:: Game_BuildingGYM_3G {"position":"150,550","size":"100,100"}
+[[Leave room through Eastern door|Game_BuildingGYM_Corridor_3G]]
+[[Leave room through Western door|Game_BuildingGYM_Corridor_3G,GYM]]
+
+
+:: Game_BuildingGYM_4G_LookAround [not_finished] {"position":"1200,125","size":"100,100"}
+narrator "You look around the room with ease as besides the mats there is nothing obscuring your view."
+
+
+:: Game_BuildingGYM_4G_Leaving {"position":"1050,250","size":"100,100"}
+<<if $visited_4G isnot True>>
+	narrator "There are two sets of doors in the room. Both are on the eastern wall.]]
+	
+	narrator "One leads to the northern path of the corridor, the southern one leads to the junction of corridors on the south."
+	
+	narrator "Which one do you choose?"
+<</if>>
+
+<<set $visited_4G to True>>
+[[Leave through the Northern door|Game_BuildingGYM_Corridor_4G,GYM]]
+[[Leave through the Southern door|Game_BuildingGYM_Corridor_2G,CLKM,4G]]
+
+
