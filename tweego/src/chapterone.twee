@@ -175,7 +175,7 @@ player-thinking "I should turn on the lights. "
 
 narrator “The moment you turned on the lights you witnessed a strange scenery. The entire restroom seemed to be covered in blood and a strange black goo."
 
-narrator "This vison lasted only a second, as your eyes got used to the light it all disappeared."
+narrator "This vison lasted only a second, and as your eyes got used to the light it all disappeared."
 
 player "WHAT THE HELL..."
 
@@ -183,5 +183,24 @@ player-thinking "Am I going nuts? What the fuck was that?!"
 
 player-thinking "I didn't sign up for all that. My therapist said that it shouldn't happen again!"
 
-narrator "It took you a while to process this hallucination. You came to conclusion that it's all your brain tricks."
+narrator ""
 
+[[Leave the toiltes|Game_Building1_Corridor_TOILETS,2B]]
+
+:: Game_Building1_Corridor_TOILETS,2B
+
+narrator "Your curiosity seems to be stronger than your fear. You hesitantly go out into the corridor."
+
+narrator "Everything seems fine, only the silence seems unnatural."
+
+narrator "You are able to sense a stragne presence, even though the corridors are empty. As if someone, or something, is watching you."
+
+narrator "In front of you there is a classroom labeled as 2B. To the south you see the eixit you use everyday to get in and out."
+
+narrator "To the north are more classrooms, and at the end of the corridor it seems to split."
+
+[[Enter the boys toilet|Game_Toilets_Start]]
+[[Enter the girls toilet|Game_Toilets_Girls]]
+[[Enter class 2B|Game_Class_2B]]
+[[Go to the north|Game_Building1_Corridor_3A,3B]]
+[[Go to the south|Game_Building1_Corridor_2A,1B,LAB]]
