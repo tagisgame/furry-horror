@@ -1,0 +1,464 @@
+:: StoryTitle
+"FNG CHAPTER ONE"
+
+
+:: StoryData
+{
+	"ifid": "6F015E94-9A0C-48A0-AA07-72F88B337B7F",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start",
+	"zoom": 1
+}
+
+
+:: Start {"position":"100,500","size":"100,100"}
+[[Game_ToiletStall_Start]]
+
+
+:: Game_ToiletStall_Start {"position":"250,500","size":"100,100"}
+<<set $player_stayed_in_toilet to 1>>
+<<set $player_forced_to_leave to false>>
+
+player_thinking "Urghhhh..."
+
+player_thinking "I must have passed out."
+
+narrator "You wake up in a cold toilet stall engrossed in darkness. You can't remember what has happened."
+
+narrator "You have a terrible headache trying to remember anything that led to this particular moment."
+
+player_thinking "Ah crap... Well, it seems I'm still at school."
+
+player_thinking "Why nobody came to help me? Didn't they notice someone has fainted in a toilet stall?"
+
+player_thinking "So I guess my hiding spot indeed works. That was the point of it after all."
+
+player "Wait..."
+
+narrator "You say that loudly, as if you couldn't control it."
+
+player_thinking "Is it dark in here? Was I knocked out for the whole day?"
+
+player_thinking "I didn't know it is possible to be out that long."
+
+player_thinking "I gotta get a grip, gotta get my stuff together."
+
+player_thinking "What will my next move would be?"
+
+player_thinking "Should I stay here?"
+
+player_thinking "Or should I- go?"
+
+[[Stay inside|Game_ToiletStall_Start_PlayerStayed]]
+[[Leave the stall|Game_Toilets_Start]]
+
+
+:: Game_ToiletStall_Start_PlayerStayed {"position":"250,325","size":"100,100"}
+narrator "You decide to stay inside the stall and contemplate for a little longer."
+
+<<if $player_stayed_in_toilet is 1>>
+    player_thinking "What if it's only a joke. They just switched off the lights and that's all."
+
+    player_thinking "It's impossible to faint and wake up after eight hours or so, right?"
+
+    player_thinking "Wait a second! What time is it now?"
+
+    narrator "You reach out to your pockets and realize that they are empty."
+
+    player_thinking "Where's my phone?! Where's my wallet?! Where are my belongings?!"
+
+    player_thinking "Now it's getting darker..."
+    <<set $checked_pockets to true>>
+
+<<elseif $player_stayed_in_toilet is 2>>
+    player_thinking "At some point one of the teachers must come here..."
+
+    player_thinking "Oh wait, they have their own restroom..."
+
+<<elseif $player_stayed_in_toilet is 3>>
+    player_thinking "I should leave this place. It's cold and stinky."
+
+    <<if $player_forced_to_leave is true>>
+        player_thinking "I have a terrible feeling about staying here."
+
+        player_thinking "I really need to go out."
+
+        [[Game_Toilets_Start]]
+    <</if>>
+
+<</if>>
+
+<<if $player_stayed_in_toilet isnot 6>>
+    narrator "You contemplate for a while and don't come up with anything useful right now."
+
+    narrator "What are you going to do now?"
+
+    <<set $player_stayed_in_toilet to $player_stayed_in_toilet + 1>>
+    [[Stay|Game_ToiletStall_Start_PlayerStayed]]
+    [[Leave|Game_Toilets_Start]]
+<<else>>
+    [[Game_ToiletStall_Start_Death]]
+<</if>>
+
+
+:: Game_ToiletStall_Start_Death {"position":"250,175","size":"100,100"}
+narrator "You hear strange noise coming from the entrance of the toilets."
+
+player_thinking "What was that? Is it a teacher? Help? Finally..."
+
+narrator "You hear closing footsteps. You decide to open your stall to seek for help."
+
+narrator "As you open the door, the dark humanoid shape emerges from the darkness."
+
+player "Hello! I must have passed out in the stall-"
+
+narrator "Before you managed to say anything else..."
+
+narrator "Your eyes fill up with blood. You feel sharp pain on your face."
+
+narrator "You try to scream, but there is a hole in your neck. There is no face of yours any more."
+
+narrator "You lay lifeless on the floor in a puddle of blood that came straight from your carotid artery."
+
+narrator "That's all. This is how your story ends."
+
+tutorial "Seriously? You thought it was a good idea?"
+
+tutorial "What were you expecting exactly?"
+
+tutorial "An additional content, right?"
+
+tutorial "Well, you get it. Are you happy now?"
+
+tutorial "This is your additional content, there you go. You died. That's the scene you were looking for?"
+
+tutorial "Bravo... 'I will stay in that toilet stall 6 times in a row'."
+
+tutorial "Now you surely want a button to come back before you chose to die."
+
+tutorial "Do you think that death works like that?"
+
+tutorial "Okay... Okay... I will give you the option to reverse your death."
+
+tutorial "Here you go:"
+
+[[Start over|Game_ToiletStall_StartOver]]
+
+
+:: Game_ToiletStall_StartOver {"position":"400,300","size":"100,100"}
+<<set $player_stayed_in_toilet to 1>>
+<<set $player_forced_to_leave to true>>
+
+narrator "You wake up in a cold toilet stall engrossed in darkness. You can't remember what has happened."
+
+narrator "You have a terrible headache trying to remember anything that led to this particular moment."
+
+player "Wait..."
+
+narrator "You say that loudly, as if you couldn't control it."
+
+player_thinking "Is it dark in here? Was I knocked out for the whole day?"
+
+player_thinking "I gotta get a grip, gotta get my stuff together."
+
+player_thinking "What will my next move would be?"
+
+player_thinking "Should I stay here?"
+
+player_thinking "Or should I- go?"
+
+[[Stay inside|Game_ToiletStall_Start_PlayerStayed]]
+[[Leave the stall|Game_Toilets_Start]]
+
+
+:: Game_Toilets_Start {"position":"400,500","size":"100,100"}
+<<if $visited_Game_Toilets_Start isnot true>>
+narrator "As you step out of the stall you find yourself in the same filty restroom you entered before losing consciousness."
+
+narrator "You can feel some sort of unnatural aura. Unpleasant feeling that puts your instincts wary."
+
+player-thinking "Why is it so quiet here? (Coś w stylu, że nie słychać nawet background noise)"
+
+player-thinking "I should turn on the lights. "
+
+narrator “The moment you turned on the lights you witnessed a strange scenery. The entire restroom seemed to be covered in blood and a strange black goo."
+
+narrator "This vison lasted only a second, and as your eyes got used to the light it all disappeared."
+
+player "WHAT THE HELL..."
+
+player-thinking "Am I going nuts? What the fuck was that?!"
+
+player-thinking "I didn't sign up for all that. My therapist said that it shouldn't happen again!"
+
+<<set $visited_Game_Toilets_Start to true>>
+<</if>>
+narrator "It's just a regular restroom. Nothing interesting in here."
+
+
+
+[[Leave the toiltes|Game_Building1_Corridor_TOILETS,2B]]
+
+
+:: Game_Building1_Corridor_TOILETS,2B {"position":"600,500","size":"100,100"}
+<<if $visited_B1_C_TOILETS_2B isnot true>>
+
+narrator "Your curiosity seems to be stronger than your fear. You hesitantly go out into the corridor."
+
+narrator "Everything seems fine, only the silence seems unnatural."
+
+narrator "You are able to sense a stragne presence, even though the corridors are empty. As if someone, or something, is watching you."
+
+narrator "In front of you there is a classroom labeled as 2B. To the south you see the eixit you use everyday to get in and out."
+
+narrator "To the north are more classrooms, and at the end of the corridor it seems to split."
+
+<<set $visited_B1_C_TOILETS_2B to true>>
+<</if>>
+
+player-thinking "Hmm... Where to now?"
+
+
+[[Enter class 2B|Game_Class_2B]]
+[[Enter the toilets|Game_Toilets_Start]]
+[[Go to the north|Game_Building1_Corridor_3A,3B]]
+[[Go to the south|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Class_2B {"position":"800,500","size":"100,100"}
+narrator "An ordinary classroom that reminds you of countless hours spent pretending to be a diligent student."
+
+
+[[Leave|Game_Building1_Corridor_TOILETS,2B]]
+
+
+:: Game_Building1_Corridor_3A,3B {"position":"725,300","size":"100,100"}
+narrator ""
+
+[[Go north|Game_Building1_Corridor_BUILDING2,4B,GYMCORRIDOR]]
+[[Go south|Game_Building1_Corridor_TOILETS,2B]]
+[[Enter room 3A|Game_Class_3A]]
+[[Enter room 3B|Game_Class_3B]]
+
+
+:: Game_Building1_Corridor_2A,1B,LAB {"position":"600,800","size":"100,100"}
+<<if $visited_G_B1_C_2A_1B_LAB isnot true>>
+
+narrator "You are getting closer to the exit. A sweet feeling of relief starts to displace your fear"
+
+<<set $visited_G_B1_C_2A_1B_LAB to true>>
+<</if>>
+
+player-thinking "What now?"
+
+[[Enter the room 2A|Game_Class_A2]]
+[[Enter the room 1D|Game_Class_1D]]
+[[Enter the lab|Game_Class_LAB]]
+[[Go north||Game_Building1_Corridor_TOILETS,2B]]
+[[Go south|Game_Building1_Corridor_A1,LAB,EXIT]]
+
+
+:: Game_Building1_Corridor_A1,LAB,EXIT {"position":"600,1100","size":"100,100"}
+<<set $obtained_code_class_1D to true>> /* To będzie ofc ukryte w innym pokoju lmao*/
+
+<<if $visited_G_B1_C_A1_LAB_EXIT isnot true>>
+
+narrator "You rush to the exit as the feeling of exitement fills you up."
+
+narrator "You want to leave this place. Rushing to the doors and try to burst through them."
+
+narrator "As soon as you hit them you relize that they are closed. You bounce of them and land on the ground"
+
+player-thinking "What..? The doors are closed?!"
+
+narrator "As soon as you get up you feel the cold breeze comming from the corridor."
+
+narrator "Looking back at the corridor you notice a shadow. A human like entity that seems to look at you.
+
+narrator "You rub your eyes and the shadow dissapears."
+
+player-thinking "What the hell was that?? Am I halucinating...?"
+
+player thinking "I need to get out of here! But where I'll find the keys to this doors?"
+
+<<set $visited_G_B1_C_A1_LAB_EXIT to true>>
+<</if>>
+
+player-thinking "What to do now?"
+
+[[Enter room A1|Game_Class_A1]]
+[[Enter the Lab|Game_Class_LAB]]
+[[Go north|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Class_LAB {"position":"775,925","size":"100,100"}
+<<if $investigated_Lab isnot true>>
+
+narrator "A strong smell of chemicals hits you as soon as you enter the Lab. The smell is so strong that it makes you dizzy."
+
+[[Investigate|Game_Class_LAB_Investigate]]
+<</if>>
+<<if $investigated_Lab is true>>
+
+narrator "You can still smell the chemicals spilled under the cabinet."
+
+[[Leave through door 1|Game_Building1_Corridor_2A,1B,LAB]]
+[[Leave through door 2|Game_Building1_Corridor_A1,LAB,EXIT]]
+[[Approach the chemicals|Game_Class_Lab_Chem]]
+<</if>>
+
+
+:: Game_Class_1D {"position":"800,700","size":"100,100"}
+<<if $visited_Game_Class_1D isnot true>>
+
+narrator "Class 1D is filled with posters presenting almost every major sport you had to know during PE classes."
+
+player-thinking "Hey, that's the classroom where physical education teacher stays during his office hours. He has his office near the gym, wonder why he isn't staying there...?"
+
+<<set $visited_Game_Class_1D to true>>
+
+<</if>>
+
+narrator "This classroom if filled with cabinets. There might be something usefull in here."
+
+
+[[Examine the cabinets|Game_Class_1D_CabinetsExamine]]
+[[Leave the class|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Class_1D_CabinetsExamine {"position":"1000,800","size":"100,100"}
+<<if $checked_cabinets_1D isnot true>>
+
+narrator "You checked all the cabinets in this classroom. Each contains some documents."
+
+narrator "Only one cabinet is secured with a code padlock."
+
+<<if $obtained_code_class_1D isnot true>>
+player-thinking "Hmm I wonder if I can find the code for that..."
+
+<</if>>
+<<if $obtained_code_class_1D is true>>
+
+player-thinking "Hey, maybe I can unlock this padlock with the code I found!"
+
+narrator "As you type in the code the padlock gets opend, You check the cabinet condent and amongst documents you find a key."
+
+player-thinking "Hmm I saw that key somewhere... I might be able to use it."
+<<set $obtained_GYM_KEY to true>>
+<</if>><</if>>
+
+<<if $checked_cabinets_1D is true>><<if $obtained_code_class_1D is true>>
+
+player-thinking "I can try to use the code I found to unlock this cabinet."
+
+narrator "As you type in the code the padlock gets opend, You check the cabinet condent and amongst documents you find a key."
+
+player-thinking "Hmm I saw that key somewhere... I might be able to use it."
+<<set $obtained_GYM_KEY to true>>
+<</if>><</if>>
+
+<<set $checked_cabinets_1D to true>>
+
+[[Leave the class|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Class_LAB_Investigate {"position":"1000,975","size":"100,100"}
+narrator "You notice that the smell comes from the chemicals spilled near the cabinet. A weird mixture  doesn't seem appealing."
+
+narrator "On the other side of the Lab you notice a door. You remember that some of the classes have two entrances."
+
+<<set $investigated_Lab to true>>
+
+[[Leave through door 1|Game_Building1_Corridor_2A,1B,LAB]]
+[[Leave through door 2|Game_Building1_Corridor_A1,LAB,EXIT]]
+[[Approach the chemicals|Game_Class_Lab_Chem]]
+
+
+:: Game_Class_Lab_Chem {"position":"1200,975","size":"100,100"}
+narrator "As you approach the chemicals the smell digs deep into your nostrils..."
+
+narrator "Sudennly you feel sleepy."
+
+player-thinikng "*yawn* What harm... can a short nap do..."
+
+narrator "The moment you thought about a sweet nap you collapsed to the ground. Your eternal sleep will indeed be harmless..."
+
+[[Restart room|Game_Class_LAB]]
+
+
+:: Game_Class_A1 {"position":"400,1000","size":"100,100"}
+narrator ""
+
+[[Examine the room|Game_Class_A1_Examine]]
+
+[[Leave|Game_Building1_Corridor_A1,LAB,EXIT]]
+[[Enter class A2|Game_Class_A2]]
+
+
+:: Game_Class_A2 {"position":"400,800","size":"100,100"}
+narrator ""
+
+[[Examine the room|Game_Class_A2_Examine]]
+
+[[Leave|Game_Building1_Corridor_2A,1B,LAB]]
+[[Enter class A1|Game_Class_A1]]
+
+
+:: Game_Class_A2_Examine {"position":"150,650","size":"100,100"}
+narrator ""
+
+[[Leave|Game_Building1_Corridor_2A,1B,LAB]]
+[[Enter class A1|Game_Class_A1]]
+
+
+:: Game_Class_A1_Examine {"position":"150,1150","size":"100,100"}
+narrator
+
+[[Leave|Game_Building1_Corridor_A1,LAB,EXIT]]
+[[Enter class A2|Game_Class_A2]]
+
+
+:: Game_Building1_Corridor_BUILDING2,4B,GYMCORRIDOR {"position":"1200,100","size":"100,100"}
+narrator ""
+
+[[Go south|Game_Building1_Corridor_3A,3B]]
+[[Go to the gym|Game_Building1_Corridor_GYMENTRANCE]]
+[[Enter the next section|Game_Building2]]
+[[Enter room 4B|Game_Class_4B]]
+
+
+:: Game_Class_3A {"position":"1000,500","size":"100,100"}
+narrator ""
+
+[[leave|Game_Building1_Corridor_3A,3B]]
+
+
+:: Game_Class_3B {"position":"1000,300","size":"100,100"}
+narrator ""
+
+[[leave|Game_Building1_Corridor_3A,3B]] 
+[[Go to room 4B|Game_Class_4B]]
+
+
+:: Game_Building1_Corridor_GYMENTRANCE {"position":"1400,100","size":"100,100"}
+narrator ""
+[[Enter the gym|Game_BuildingGYM_Corridor_1G,BUILDING1ENTRANCE]]
+[[Go back|Game_Building1_Corridor_BUILDING2,4B,GYMCORRIDOR]]
+
+
+:: Game_BuildingGYM_Corridor_1G,BUILDING1ENTRANCE {"position":"1600,100","size":"100,100"}
+Gym
+
+
+:: Game_Building2 {"position":"1500,300","size":"100,100"}
+Building2
+
+
+:: Game_Class_4B {"position":"1275,300","size":"100,100"}
+narrator ""
+
+[[Leave|Game_Building1_Corridor_BUILDING2,4B,GYMCORRIDOR]] 
+[[Go to room 3B|Game_Class_3B]]
+
+
