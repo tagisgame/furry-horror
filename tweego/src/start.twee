@@ -88,11 +88,10 @@ narrator "You begin to shoulder your way through the crowd towards the exit of t
 
 narrator "You reach the door leading to a hallway. You open them and walk through."
 
-[[Ch0_Hallway_Sc1_PlayerGoesToTheToilets]] 
+[[Ch0_Hallway_Sc1_PlayerGoesToTheToilets]]
 
 
-:: Ch0_Hallway_Sc1_PlayerGoesToTheToilets {"position":"100,300","size":"100,100"} 
-
+:: Ch0_Hallway_Sc1_PlayerGoesToTheToilets {"position":"100,300","size":"100,100"}
 narrator "You are wandering the hollway that, despite the ongoing show, is crowded with people."
 
 narrator "Those people seem to be interested in your person and you can feel thier piercing eyes on you."
@@ -121,7 +120,6 @@ narrator "Finally, after mentally exhausting journey to the toilet, you reach th
 
 
 :: Ch0_ToiletStall_Sc1_PlayerTakeAPause {"position":"100,425","size":"100,100"}
-
 # Black screen - the transition between the corridor and bathroom stall - omitting the Toilets scene
 narrator "Those toilets are always cold and too filthy to be used. They disgust you but it is the only safe place in this school."
 
@@ -152,7 +150,6 @@ player_thinking "Oh God... What do I do now..."
 
 
 :: Ch0_ToiletStall_Sc2_PlayerFaints [doc_break] {"position":"100,550","size":"100,100"}
-
 narrator "Suddenly, you hear the door opening. Quiet footsteps can be heard outside the stall."
 
 narrator "You notice a shadow of a person under the door. Every part of your body starts to ache in fear."
@@ -162,4 +159,5 @@ mysterious-person "Hello? Is anybody in there?"
 narrator "Hearing this calm, yet unsettling voice, you feel your consciousness fading."
 
  [[Ch1_ToiletStall_Sc1_PlayerWakesUp]]
+
 

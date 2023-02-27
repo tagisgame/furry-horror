@@ -1,0 +1,123 @@
+:: StoryTitle
+FNG Chapter Two
+
+
+:: StoryData
+{
+	"ifid": "E4D37280-1C54-4253-9BAA-831E44B150FB",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Untitled Passage",
+	"zoom": 1
+}
+
+
+:: Untitled Passage {"position":"100,300","size":"100,100"}
+[[Go to the corridor|Game_Linking_Corridor]]
+
+
+:: Game_Linking_Corridor {"position":"300,300","size":"100,100"}
+narrator """
+cośtamcośtam że ciemno i duchy
+
+"""
+
+[[Go to the second building|Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl]]
+
+
+:: Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl {"position":"500,300","size":"100,100"}
+[[Go north|Game_Building2_Corridor_S2,4C]]
+[[Go South|Game_Building2_Corridor_3C,WCBoy]]
+[[Go Building1|Game_Linking_Corridor]] - zablokuj to graczowi 
+[[Class 3C|Game_Class_3C]]
+[[Class 3D|Game_Class_3D]]
+[[WC Girl|Game_Building2_WC_Girls]]
+
+
+:: Game_Building2_Corridor_S2,4C {"position":"500,100","size":"100,100"}
+[[Go south|Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl]]
+[[Class 4C|Game_Class_4C]]
+[[Stairs|Game_Building_Stairs2]]
+
+
+:: Game_Class_4C {"position":"300,100","size":"100,100"}
+smth here
+
+[[Leave|Game_Building2_Corridor_S2,4C]]
+
+
+:: Game_Building2_Corridor_3C,WCBoy {"position":"500,500","size":"100,100"}
+[[Go north|Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl]]
+[[Go south|Game_Building2_Corridor_2C,2D]]
+[[Class 3C|Game_Class_3C]]
+[[WC Boy|Game_Building2_WC_Boys]]
+
+
+:: Game_Class_3C {"position":"300,500","size":"100,100"}
+[[Leave door 1|Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl]]
+[[Leave door 2|Game_Building2_Corridor_3C,WCBoy]]
+
+
+:: Game_Class_3D {"position":"700,250","size":"100,100"}
+[[Leave|Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl]]
+
+
+:: Game_Building2_WC_Girls {"position":"700,400","size":"100,100"}
+[[Leave|Game_Building2_Corridor_LinkCorr,3D,3C,WCGirl]]
+
+
+:: Game_Building2_WC_Boys {"position":"700,600","size":"100,100"}
+[[Leave|Game_Building2_Corridor_3C,WCBoy]]
+
+
+:: Game_Building2_Corridor_2C,2D {"position":"500,700","size":"100,100"}
+[[Go north|Game_Building2_Corridor_3C,WCBoy]]
+[[Go south|Game_Building2_Corridor_1C,2D]]
+[[Class 2C|Game_Class_2C]]
+[[Class 2D|Game_Class_2D]]
+
+
+:: Game_Building2_Corridor_1C,2D {"position":"500,900","size":"100,100"}
+[[Go north|Game_Building2_Corridor_2C,2D]]
+[[Go south|Game_Building2_Corridor_S1,1D]]
+[[Class 1C|Game_Class_1C]]
+[[Class 2D|Game_Class_2D]]
+
+
+:: Game_Building2_Corridor_S1,1D {"position":"500,1100","size":"100,100"}
+[[Go north|Game_Building2_Corridor_1C,2D]]
+[[Stairs 1|Game_Building2_Stairs1]]
+[[Class 1D|Game_Class_1D]]
+
+
+:: Game_Class_2C {"position":"300,700","size":"100,100"}
+[[Leave door 1|Game_Building2_Corridor_2C,2D]]
+[[Leave door 2|Game_Class_1C]]
+
+
+:: Game_Class_1C {"position":"300,900","size":"100,100"}
+[[Leave door 2|Game_Class_2C]]
+[[Leave door 1|Game_Building2_Corridor_1C,2D]]
+
+
+:: Game_Class_2D {"position":"700,800","size":"100,100"}
+[[Leave door 1|Game_Building2_Corridor_2C,2D]]
+[[Leave door 2|Game_Building2_Corridor_1C,2D]]
+
+
+:: Game_Building2_Stairs1 {"position":"200,1100","size":"100,100"}
+Temp?
+
+[[leave|Game_Building2_Corridor_S1,1D]]
+
+
+:: Game_Building_Stairs2 {"position":"800,100","size":"100,100"}
+temp?
+
+[[Leave|Game_Building2_Corridor_S2,4C]]
+
+
+:: Game_Class_1D {"position":"700,1100","size":"100,100"}
+[[Leave|Game_Building2_Corridor_S1,1D]]
+
+

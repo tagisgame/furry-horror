@@ -1,0 +1,906 @@
+:: StoryTitle
+"FNG CHAPTER ONE"
+
+
+:: StoryData
+{
+	"ifid": "6F015E94-9A0C-48A0-AA07-72F88B337B7F",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start",
+	"tag-colors": {
+		"Add-Room-Description": "orange",
+		"Classroom": "yellow",
+		"Corridor": "purple",
+		"Death": "blue",
+		"Examine-and-redo": "red",
+		"Finished": "green",
+		"Finished-for-renpy": "blue",
+		"temp-command": "red"
+	},
+	"zoom": 0.6
+}
+
+
+:: Start {"position":"100,500","size":"100,100"}
+[[Game_ToiletStall_Start]]
+
+
+:: Game_ToiletStall_Start [Finished] {"position":"300,500","size":"100,100"}
+<<set $player_stayed_in_toilet to 1>>
+<<set $player_forced_to_leave to false>>
+<<set $obtained_exit_key to false>>
+
+player_thinking "Urghhhh..."
+
+player_thinking "I must have passed out."
+
+narrator "You wake up in a cold toilet stall engrossed in darkness. You can't remember what has happened."
+
+narrator "You have a terrible headache trying to remember anything that led to this particular moment."
+
+player_thinking "Ah crap... Well, it seems I'm still at school."
+
+player_thinking "Why nobody came to help me? Didn't they notice someone has fainted in a toilet stall?"
+
+player_thinking "So I guess my hiding spot indeed works. That was the point of it after all."
+
+player "Wait..."
+
+narrator "You say that loudly, as if you couldn't control it."
+
+player_thinking "Is it dark in here? Was I knocked out for the whole day?"
+
+player_thinking "I didn't know it is possible to be out that long."
+
+player_thinking "I gotta get a grip, gotta get my stuff together."
+
+player_thinking "What will my next move would be?"
+
+player_thinking "Should I stay here?"
+
+player_thinking "Or should I- go?"
+
+[[Stay inside|Game_ToiletStall_Start_PlayerStayed]]
+[[Leave the stall|Game_Toilets_Start]]
+
+
+:: Game_ToiletStall_Start_PlayerStayed [Finished] {"position":"300,300","size":"100,100"}
+narrator "You decide to stay inside the stall and contemplate for a little longer."
+
+<<if $player_stayed_in_toilet is 1>>
+    player_thinking "What if it's only a joke. They just switched off the lights and that's all."
+
+    player_thinking "It's impossible to faint and wake up after eight hours or so, right?"
+
+    player_thinking "Wait a second! What time is it now?"
+
+    narrator "You reach out to your pockets and realize that they are empty."
+
+    player_thinking "Where's my phone?! Where's my wallet?! Where are my belongings?!"
+
+    player_thinking "Now it's getting darker..."
+    <<set $checked_pockets to true>>
+
+<<elseif $player_stayed_in_toilet is 2>>
+    player_thinking "At some point one of the teachers must come here..."
+
+    player_thinking "Oh wait, they have their own restroom..."
+
+<<elseif $player_stayed_in_toilet is 3>>
+    player_thinking "I should leave this place. It's cold and stinky."
+
+    <<if $player_forced_to_leave is true>>
+        player_thinking "I have a terrible feeling about staying here."
+
+        player_thinking "I really need to go out."
+
+        [[Game_Toilets_Start]]
+    <</if>>
+
+<</if>>
+
+<<if $player_stayed_in_toilet isnot 6>>
+    narrator "You contemplate for a while and don't come up with anything useful right now."
+
+    narrator "What are you going to do now?"
+
+    <<set $player_stayed_in_toilet to $player_stayed_in_toilet + 1>>
+    [[Stay|Game_ToiletStall_Start_PlayerStayed]]
+    [[Leave|Game_Toilets_Start]]
+<<else>>
+    [[Game_ToiletStall_Start_Death]]
+<</if>>
+
+
+:: Game_ToiletStall_Start_Death [Finished] {"position":"300,100","size":"100,100"}
+narrator "You hear strange noise coming from the entrance of the toilets."
+
+player_thinking "What was that? Is it a teacher? Help? Finally..."
+
+narrator "You hear closing footsteps. You decide to open your stall to seek for help."
+
+narrator "As you open the door, the dark humanoid shape emerges from the darkness."
+
+player "Hello! I must have passed out in the stall-"
+
+narrator "Before you managed to say anything else..."
+
+narrator "Your eyes fill up with blood. You feel sharp pain on your face."
+
+narrator "You try to scream, but there is a hole in your neck. There is no face of yours any more."
+
+narrator "You lay lifeless on the floor in a puddle of blood that came straight from your carotid artery."
+
+narrator "That's all. This is how your story ends."
+
+tutorial "Seriously? You thought it was a good idea?"
+
+tutorial "What were you expecting exactly?"
+
+tutorial "An additional content, right?"
+
+tutorial "Well, you get it. Are you happy now?"
+
+tutorial "This is your additional content, there you go. You died. That's the scene you were looking for?"
+
+tutorial "Bravo... 'I will stay in that toilet stall 6 times in a row'."
+
+tutorial "Now you surely want a button to come back before you chose to die."
+
+tutorial "Do you think that death works like that?"
+
+tutorial "Okay... Okay... I will give you the option to reverse your death."
+
+tutorial "Here you go:"
+
+[[Start over|Game_ToiletStall_StartOver]]
+
+
+:: Game_ToiletStall_StartOver [Finished] {"position":"500,300","size":"100,100"}
+<<set $player_stayed_in_toilet to 1>>
+<<set $player_forced_to_leave to true>>
+
+narrator "You wake up in a cold toilet stall engrossed in darkness. You can't remember what has happened."
+
+narrator "You have a terrible headache trying to remember anything that led to this particular moment."
+
+player "Wait..."
+
+narrator "You say that loudly, as if you couldn't control it."
+
+player_thinking "Is it dark in here? Was I knocked out for the whole day?"
+
+player_thinking "I gotta get a grip, gotta get my stuff together."
+
+player_thinking "What will my next move would be?"
+
+player_thinking "Should I stay here?"
+
+player_thinking "Or should I- go?"
+
+[[Stay inside|Game_ToiletStall_Start_PlayerStayed]]
+[[Leave the stall|Game_Toilets_Start]]
+
+
+:: Game_Toilets_Start [Finished] {"position":"500,500","size":"100,100"}
+<<if $visited_Game_Toilets_Start isnot true>>
+narrator "As you step out of the stall you find yourself in the same filty restroom you entered before losing consciousness."
+
+narrator "You can feel some sort of unnatural aura. Unpleasant feeling that puts your instincts wary."
+
+player-thinking "Why is it so quiet here? (Coś w stylu, że nie słychać nawet background noise)"
+
+player-thinking "I should turn on the lights. "
+
+narrator “The moment you turned on the lights you witnessed a strange scenery. The entire restroom seemed to be covered in blood and a strange black goo."
+
+narrator "This vison lasted only a second, and as your eyes got used to the light it all disappeared."
+
+player "WHAT THE HELL..."
+
+player-thinking "Am I going nuts? What the fuck was that?!"
+
+player-thinking "I didn't sign up for all that. My therapist said that it shouldn't happen again!"
+
+<<set $visited_Game_Toilets_Start to true>>
+<</if>>
+narrator "It's just a regular restroom. Nothing interesting in here."
+
+
+
+[[Leave the toiltes|Game_Building1_Corridor_TOILETS,2B]]
+
+
+:: Game_Building1_Corridor_TOILETS,2B {"position":"700,400","size":"100,100"}
+<<if $visited_B1_C_TOILETS_2B isnot true>>
+
+narrator "Your curiosity seems to be stronger than your fear. You hesitantly go out into the corridor."
+
+narrator "Everything seems fine, only the silence feels unnatural."
+
+narrator "You are able to sense a stragne presence, even though the corridors are empty. As if someone, or something, is watching you."
+
+narrator "In front of you there is a classroom labeled as 2B. To the south you see the eixit you use everyday to get in and out."
+
+narrator "To the north are more classrooms, and at the end of the corridor it seems to split."
+
+
+<<set $visited_B1_C_TOILETS_2B to true>>
+<</if>>
+
+player-thinking "Hmm... Where to now?"
+
+
+[[Enter class 2B|Game_Class_2B]]
+[[Enter the toilets|Game_Toilets_Start]]
+[[Go north|Game_Building1_Corridor_3A,3B]]
+[[Go south|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Class_2B [Finished] {"position":"700,200","size":"100,100"}
+<<if $class_2b_visited isnot true>>
+Narrator """You enter one of many classrooms in this school.
+
+Weirdly enough the windows are bricked up, yet you remeber that once or twice you sneaked from the school through them. 
+
+The teacher's chairs seems to be broken. There are some parts laying on the ground."""
+<<set $class_2b_visited to true>>
+
+[[Check the chair|Game_Class_2B][$checked_chair_2b to true]]
+[[Keep looking around|Game_Class_2B][$skipped_chair_2b to true]]
+<</if>>
+
+
+
+<<if $skipped_chair_2b is true and $left_class_2b isnot true>>
+narrator  """At the back of the class you see several cabinets. They seem to contain inessential for you items.
+
+On the walls you can see posters with mathematic equations. You shudder as you are remembered by them about math.
+
+All you can remember is that if you don't remember what to do you count discriminant.
+
+Apart from that the class seems to be properly cleaned, everything but teacher's chair is in it's place"""
+
+
+[[Check the chair|Game_Class_2B][$checked_chair_2b to true]]
+[[Leave|Game_Building1_Corridor_TOILETS,2B][ $left_class_2b to true, $picked_screwdriver to false]]
+<</if>>
+
+<<if $left_class_2b is true and $checked_chair_2b isnot true and $prank isnot true>>
+
+narrator """An ordinary classroom that reminds you of countless hours spent pretending to be a diligent student.
+
+That broken chair is still there."""
+[[Check the chair|Game_Class_2B][$checked_chair_2b to true]]
+[[Leave|Game_Building1_Corridor_TOILETS,2B][ $left_class_2b to true, $picked_screwdriver to false]]
+<</if>>
+
+
+
+<<if $checked_chair_2b is true and $prank isnot true>>
+narrator """You approach the teacher's chair and you notice that it has a few loose screws.
+
+It looks like someone tried to pull a prank on the math teacher. 
+
+The plan must have failed since the chair is holding up so-so and the screwdriver is still there."""
+
+player_thinking """What a lame prank... 
+
+If I were here to help them it would be something much better!"""
+
+
+
+[[Pick up the screwdriver|Game_Class_2B][$picked_screwdriver to true]]
+[[Leave|Game_Building1_Corridor_TOILETS,2B][ $left_class_2b to true, $picked_screwdriver to false, $prank to true]]
+<</if>>
+
+
+
+
+<<if $picked_screwdriver is true and $left_class_2b is true>>
+Narrator "An ordinary classroom that reminds you of countless hours spent pretending to be a diligent student."
+[[Leave|Game_Building1_Corridor_TOILETS,2B]]
+<</if>>
+
+
+
+<<if $picked_screwdriver isnot true and $left_class_2b is true and $prank is true>>
+Narrator """An ordinary classroom that reminds you of countless hours spent pretending to be a diligent student.
+
+Under the teacher's chair still lies the screwdriver."""
+
+[[Pick up the screwdriver|Game_Class_2B][$picked_screwdriver to true]]
+[[Leave|Game_Building1_Corridor_TOILETS,2B]]
+<</if>>
+
+
+:: Game_Building1_Corridor_3A,3B [Examine-and-redo] {"position":"1000,300","size":"100,100"}
+<<if $visited_G_B1_C_3A_3B is not true>>
+narrator """
+As you make your way through the corridor you feel shivers running down your spine.
+
+You are moving away from the exit, hoping that you will finnaly find some help.
+"""
+
+player """
+The exit is not this way... 
+
+Should I investigate the school or head right to the exit?
+"""
+
+<<set $visited_G_B1_C_3A_3B to true>>
+<</if>>
+
+player_thinking "Another decision to make..."
+
+[[Go north|Game_Building1_Corridor_BUILDING2,4B,GYMCORRIDOR]]
+[[Go south|Game_Building1_Corridor_TOILETS,2B]]
+[[Enter room 3A|Game_Class_3A]]
+[[Enter room 3B|Game_Class_3B]]
+
+
+:: Game_Building1_Corridor_2A,1B,LAB [Corridor] {"position":"700,800","size":"100,100"}
+<<if $visited_G_B1_C_2A_1B_LAB isnot true>>
+
+narrator "You are getting closer to the exit. A sweet feeling of relief starts to displace your fear"
+
+<<set $obtained_exit_key to true>> temp
+
+<<set $visited_G_B1_C_2A_1B_LAB to true>>
+<</if>>
+
+player-thinking "What now?"
+
+[[Enter class 2A|Game_Class_A2]]
+[[Enter class 1D|Game_Class_1D]]
+[[Enter the Lab|Game_Class_LAB]]
+[[Go north|Game_Building1_Corridor_TOILETS,2B]]
+[[Go south|Game_Building1_Corridor_A1,LAB,EXIT]]
+
+
+:: Game_Building1_Corridor_A1,LAB,EXIT {"position":"700,1200","size":"100,100"}
+narrator "You rush to the exit as the feeling of exitement fills you up."
+
+narrator "You want to leave this place. Rushing to the doors and try to burst through them."
+
+narrator "As soon as you hit them you relize that they are closed. You bounce of them and land on the ground"
+
+player-thinking "What..? The doors are closed?!"
+
+narrator "As soon as you get up you feel the cold breeze comming from the corridor."
+
+narrator "Looking back at the corridor you notice a shadow. A human like entity that seems to look at you.
+
+narrator "You rub your eyes and the shadow dissapears."
+
+player-thinking "What the hell was that?? Am I halucinating...?"
+
+player thinking "I need to get out of here! But where I'll find the keys to this doors?"
+
+
+
+#przy każdym powrocie do drzwi 
+player-thinking "This is the exit, but I can't open the doors. What to do now?"
+
+
+
+[[Enter room A1|Game_Class_A1]]
+[[Enter the Lab|Game_Class_LAB]]
+[[Go north|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Class_1D [Finished-for-renpy] {"position":"900,700","size":"100,100"}
+#pierwsze wejście
+narrator """This classroom was assigned to the sports class.
+
+Even though they left hours ago, you can still smell the mixture of 
+deodorant and sweat.
+
+You remember a small quarrel between the students and the principal concerning the windows in this class.
+
+The students wanted to keep them open after their physical education lessons, and the principal was againt it. Especially during the winter,
+
+After all the principal won and ordered to put in lockable windows that only teachers had keys to."""
+
+
+#wybór - sprawdzenie pokoju i wyjście z niego
+
+
+#sprawdzenie pokoju
+narrator """After examining the room you notice a few file cabinets that pick your attention.
+
+Searching them you find various documents concerning every single competition the sports class took part.
+
+Among these files you find school diary. A tempting opportunity to mess with the bullies from this class.
+
+However you are more interested in the last cabinet.
+
+As you try to open it you realise it is locked."""
+
+player_thinking """Hmm... There must be something interesting in here.
+
+But how do I open it?"""
+#opcje otwarcia i wyjścia
+
+#otwarcie szafki śrubokrętem
+player_thinking """I can use this screwdriver to unscrew the doors. 
+
+It's not a perfectly secure cabinet if I can do this..."""
+
+narrator """Unscrewing the few screws allows you to repeal the cabinets doors.
+
+You put your hand inside, trying to find something useful.
+
+After a while you are able to feel a smal item inside.
+
+You instinctively grab it and you take your hand out of the file cabinet.
+
+Now you're holding a key with a rugby ball keychain in your hand"""
+#gracz dostaje klucz do sali gimnastycznej
+
+player_thinking "Hey, that's the key the P.E. teacher uses to let us in into the gym!"
+
+
+#otwarcie szafki kluczem
+narrator """Keeping in mind the found key, you check if it matches the lock.
+
+You turn the key and the cabinet opens.
+
+Weirdly enough it is almost empty, the only thing that was protected by the lock was another key.
+
+You reach out for him and notice that it has a rugby ball keychain"""
+
+player_thinking "Hey, that's the key the P.E. teacher uses to let us in into the gym!"
+
+
+#otwarcie szafki siłą
+narrator """The cabinet seems flimsy enough that you would be able to force it open.
+
+You shove your hands in the gap between the door and the rest of the cabinet.
+
+You strain your frail muscles, tense your whole body until the door finally bursts open.
+
+The door swung unluckily and its sharp metal corner grazed your cheek, leaving a huge gash."""
+
+player "FUCK! Oh my God that hurts so bad!"
+
+narrator """As you scream in pain you cheek starts to bleed profusely. 
+
+Trying to stop the bleeding, you hold your wound with your hand, look at the contents of the cupboard and notice one item: keys with a rugby ball keychain.
+
+You grab the key and hear some sort of howling comming from the depths of the school."""
+
+player_thinking """What the hell is that?
+
+We've got no animals in school... The howling must come from outside.
+
+I hope so..."""
+#Gracz dostaje klucz i jest ranny
+
+
+#jeżeli wraca bez sprawdzenia pokoju
+narrator "You enter the sports class room. It might contain something interesting.
+"
+#sprawdzenie i wyjście
+
+#jeżeli wraca i już sprawdził pokój
+narrator "You enter the sports class room with the closed file cabinet. It might hide something interesting"
+#wybór sposobu otwarcia szafki + wyjście
+
+#jeżeli wraca i zdobył klucz
+narrator """You enter the sports class room. 
+
+You searched it previously and found a key to the gym."""
+[[Leave|Game_Building1_Corridor_2A,1B,LAB]]
+
+
+:: Game_Building1_Corridor_BUILDING2,4B,GYMCORRIDOR [Corridor Examine-and-redo] {"position":"1300,225","size":"100,100"}
+<<if $visited_B1_C_B2_4B_GC isnot true>>
+
+narrator """
+You make your way to the corridor diverge.
+
+The dark corridors emanate some kind of fretful energy.
+
+It is almost incomprehensible.
+"""
+
+player-thinking """
+Why is it so creepy in here? It's just a school of mine...
+
+I really should turn on the lights everywhere...
+
+Or at least get a flashlight. (Haha nie ma)
+"""
+
+<<set $visited_B1_C_B2_4B_GC to true>>
+<</if>>
+
+player_thinking "haha funny" - change it later plz
+
+[[Go south|Game_Building1_Corridor_3A,3B]]
+[[Go to the gym|Game_Building1_Corridor_GYMENTRANCE]]
+[[Enter the next Building|Game_Building2]]
+[[Enter class 4B|Game_Class_4B]]
+
+
+:: Game_Class_3A [Classroom] {"position":"1200,500","size":"100,100"}
+narrator """
+You enter the classroom of everyone's favourite teacher - Mrs. Garlcik.
+"
+
+[[leave|Game_Building1_Corridor_3A,3B]]
+
+
+:: Game_Class_3B [Finished-for-renpy] {"position":"1400,400","size":"100,100"}
+#Pierwsze wejście
+player "FUCK"
+
+narrator """Your heart starts pounding as you notice a skeleton right in front of you.
+
+It took you a second to realise that it is the human skeleton model for the biology class."""
+
+player-thinking """I swear to God I hate it here...
+
+If I recall correctly some studends called this skelly "Bob"
+
+A weird habbit to name dead objects... Especcialy if it's a HUMAN SKELETON!
+
+Well, at least it's not a furry costume..."""
+
+
+#wybór - sprawdź pokój i wyjdź
+
+#spradź
+narrator """You look around the room to find something usefull.
+
+Searching through teacher's desk and numerous file cabinets brings no luck.
+
+It seems that there is nothing useful.
+
+Giving up with the search you once again glance at Bob.
+
+You notice that he has a note stuck between his ribs.
+
+Carefuly reaching for it, as you are still scared of the skeleton, you manage to take it out."""
+
+player """What is that note?
+
+"My sweetest... 
+
+I cannot wait any longer. 
+
+I hid the key in room A2, in your favorite flower on the windowsill. You'll use it to open my locker, and there'll be a spare key to the gym...
+
+Meet me there..."
+
+OH MY GOD THIS IS AWFUL!
+
+THEY DO WHAT IT THERE?!"""
+
+narrator "You shudder just thinking about the naughty things that were mentioned in the letter."
+
+player_thinking "Well, at least now I can find a key to a cabinet..."
+#Gracz ma hinta o kluczu w A2 i może go znaleźć
+
+
+#gracz wraca i ma hinta
+player_thinking "This Creepy Bob is here..."
+
+#gracz nie przeszukał i wraca
+narrator """You once again encounter the room with little happy skeleton named Bob.
+
+There still might be something useful here"""
+
+[[Leave door 1|Game_Building1_Corridor_3A,3B]]
+[[Leave door 2|Game_Class_4B]]
+
+
+:: Game_Building1_Corridor_GYMENTRANCE {"position":"1100,100","size":"100,100"}
+#wejście do sali gimnastycznej
+
+
+:: Game_Building2 {"position":"1500,100","size":"100,100"}
+#wejście do drugiego budynku
+
+
+:: Game_Class_4B {"position":"1600,300","size":"100,100"}
+
+
+:: Game_Class_LAB [Finished-for-renpy] {"position":"1100,1000","size":"100,100"}
+#pierwsze wejście
+narrator """As you enter the class you are hit with strong smell of chemicals.
+
+The smell makes you nauseous, however, you overcome your reflexes and keep a sharp mind.
+
+After a quck glance you notice that the class has two set of doors and the windows are blocked with metal bars.
+
+Only soft moonlight illuminates the room"""
+
+player_thinking "Why does it looks so creepy..."
+
+Narrator """The laboratory reminds you of the interior of lunatic asylums you saw in countless horrors. 
+
+You never noticed that similarity until you had a chance to visit this class in almost pure darkness.
+
+Looking around you notice some flasks on the teacher's desk.
+
+It seems like several of them contain some kind of liquids.
+
+Maybe the teacher was about to conduct an experiment, but the lesson finished?"""
+
+#wybór - keep looking around/check the flasks
+
+
+#jeżeli sprawdza fiolki
+[[Check the flasks|Game_Class_Lab_Flasks]]
+
+
+#jeżeli został
+narrator """Overall the class is tidy. Every student left his desk in a perfect condition.
+
+Yet, on the back of the class you notice one desk that stands out.
+
+It appears that one student left all his belongings. 
+
+His desk look like he never left the class - it is prepared for the upcoming lesson."""
+
+#wybór - keep looking around/check the desk
+
+
+#jeżeli sprawdza biurko
+[[Check the desk|Game_Class_Lab_Desks]]
+
+
+#jeżeli został
+narrator """As you look around the class one last time you notice a big poster on the wall. 
+
+There is not enough light to see its content from a distance.
+
+It might be something interesting.
+
+Or completly irrelevant."""
+#po tym wyświetla się do sprawdzenia wszystko + wyjście z sali
+
+
+#jeżeli wyszedł z sali i nie skończył eksperymentu
+narrator """You are yet again treated with a strong chemical smell. 
+
+The experiment is yet to conduct."""
+#wyświetla się do sprawdzenia wszystko + wyjście z sali
+
+
+#jeżeli wyszedł z sali i skończył eksperyment
+narrator """You are yet again treated with a strong chemical smell.
+
+There is nothing interesting left."""
+#wyjście z sali
+
+
+:: Game_Class_Lab_Flasks [Finished] {"position":"1600,1100","size":"100,100"}
+<<set $examined_flasks to true>>
+<<if $flasks_empty isnot true>>
+<<set $x to 0>>
+<<set $array_flasks to [0, 0, 0, 0]>>
+<<set $h to 0>>
+<<set $c to 0>>
+<<set $f to 0>>
+<<set $o to 0>>
+<<set $ready to false>>
+<</if>>
+
+<<if $FlasksApproached isnot true>>
+<<set $FlasksApproached to true>>
+narrator """In front of you there are 5 flasks, and all but one are filled with colourful liquids.
+
+Empty flask appears to be larger than the others, you can clearly pour all chemicals into it."""
+
+player_thinking """Hmm I wonder what goes first,,,
+
+Every flask has it's own letter...
+
+H, C, F, and O.
+
+What does that mean?"""
+
+<<else>>
+player_thinking "What to do now?"
+
+<</if>>
+
+
+<<if $h == 0>>
+[[Pour flask H|Game_Class_Lab_Flasks][$array_flasks[$x] to 1, $x +1, $flasks_empty to true, $x to $x +1, $h = $h + 1]]
+<</if>>
+
+<<if $c == 0>>
+[[Pour flask C|Game_Class_Lab_Flasks][$array_flasks[$x] to 2, $x +1, $flasks_empty to true, $x to $x +1, $c = $c +1]]
+<</if>>
+
+<<if $f == 0>>
+[[Pour flask F|Game_Class_Lab_Flasks][$array_flasks[$x] to 4, $x +1, $flasks_empty to true, $x to $x +1, $f = $f + 1]]
+<</if>>
+
+<<if $o == 0>>
+[[Pour flask O|Game_Class_Lab_Flasks][$array_flasks[$x] to 3, $x +1, $flasks_empty to true, $x to $x +1, $o = $o +1]]
+<</if>>
+
+
+
+<<if $x ==4>>
+<<if $array_flasks[0] == 1 and $array_flasks[1] == 2 and $array_flasks[2] == 3 and $array_flasks[3] == 4>> 
+
+[[mix|Game_Class_Lab_Flasks_Succes]]
+
+<<else>>
+[[mix|Game_Class_Lab_Flasks_Fail]]
+
+<</if>>
+<</if>>
+
+[[Step back|Game_Class_LAB]]
+
+<<if $examined_desk is true>>
+[[Examine the desks|Game_Class_Lab_Desks]]
+<</if>>
+
+<<if $examined_ptable is true>>
+[[Examine periodic table|Game_Class_Lab_Ptable]]
+<</if>>
+
+
+:: Game_Class_Lab_Desks [Finished] {"position":"1400,1300","size":"100,100"}
+<<set $examined_desk to true>>
+
+narrator """After going through one student's notes you find some statements that might be helpful with the experiment.
+
+One being the solution. Or at least it looks like one, hovewer the student's chicken scratch handwriting makes it impossible to read.
+
+The second note is no better, but you are able to read several words:
+
+"Properly", "conduct", "pour ingredients", "order", and "periodic table".
+"""
+
+<<if $examined_ptable isnot true>>
+[[Step back|Game_Class_Lab_Ptable]]
+<<else>>
+[[Step back|Game_Class_LAB]]
+<</if>>
+
+<<if $examined_ptable is true>>
+[[Ckeck periodic table|Game_Class_Lab_Ptable]]
+<</if>>
+
+<<if $examined_flasks is true>>
+[[Check the flasks|Game_Class_Lab_Flasks]]
+<</if>>
+
+
+:: Game_Class_Lab_Flasks_Succes [Finished] {"position":"1500,900","size":"100,100"}
+<<set $lab_finished to true>>
+
+narrator """As you mix the solution you notice it changed its colour to dark red.
+
+You step back, as you fear that you did something wrong.
+
+Seconds later the mixture erupts like a volcano.
+
+You witness a beautiful show of fake and completly harmless, momemade, volcano."""
+
+player "HA, I MADE A VOLCANOOOOO!"
+
+narrator """Filled with joy you start to preforme your favourite dance - macarena.
+
+Your clumsiness awakes..
+
+Trying to end the dance with a bang you knock down the mixture and it pours out on the floor.
+
+As the solution spreads you notice a small box laying on the ground
+
+Inside this box you find a pair of anti-surge gloves"""
+
+
+[[Pick up the gloves|Game_Class_LAB][$picked_gloves to ture]]
+
+<!-- Sukces -->
+
+
+:: Game_Class_Lab_Flasks_Fail [Finished] {"position":"1700,900","size":"100,100"}
+narrator """As you mix the solution you start to notice it is somehow boiling.
+
+The clear and colorless mixture starts to rapidly change its colours.
+
+A beautiful color show is calming and you tilt your face to see it better.
+
+Before you get a chance to react the solution erupted straight into you face.
+
+Hot and corrosive substance covered you face, as you tremble in pain."""
+
+
+<!-- porażka -->
+
+
+:: Game_Class_A2 [Finished-for-renpy] {"position":"400,900","size":"100,100"}
+#pierwsze wejście
+narrator """You enter a classroom beautifully decorated with various flowers.
+
+One could mistake it for the biology class, yet you rembember that one of the teachers really loves flowers.
+
+This teacher is seriously obsessed with her flowers and the classroom is filled with all kinds of fertilizers, special types of soil, and huge water cans.
+
+Students often complain that because of her interests, they have to take a makeup class, because most of the classes are devoted to flowers and not teaching"""
+
+
+#jeżeli gracz nie ma notatki po pierwszym wejściu
+player_thinking """Hmm I don't want to get my hands dirty...
+
+There probably isn't even a thing worth my time"
+
+
+#jeżeli gracz ma notatkę
+player_thinking """If I remember correctly, there is a key hidden in one of the flowers...
+
+Now, which one would it be?"""
+
+narrator """You searched every pot with flowers on the windowsill.
+
+Trying to find the key you didn't hasitete to dig in the soil and your hands got dirty.
+
+You did not consider action and started looking for the key in random pots.
+
+And it so happened that the last pot you checked, the one that's the closest to the teacher's desk had a key, waiting there on the soil."""
+#gracz dostaje klucz do cabinet w 1D
+
+[[Leave door 1|Game_Building1_Corridor_2A,1B,LAB]]
+[[Leave door 2|Game_Class_A1]]
+
+
+:: Game_Class_A1 {"position":"400,1200","size":"100,100"}
+#Jeżeli gracz wchodzi pierwszy raz
+narrator """You enter the darkest room you have encountered so far.
+
+The moment you stepped through the door they slammed behind you.
+
+You try to reach for the doorknob, but your hand touched the wall. 
+
+You are unable to feel the door and the wall feels sticky as if something is running down its walls.
+
+Suddenly, a light came on at the other end of the room. 
+
+It was very dim, illuminating only the space around it.
+
+
+"""
+
+
+:: Game_Class_Lab_Ptable [Finished] {"position":"1700,1300","size":"100,100"}
+<<set $examined_ptable to true>>
+<<set $examined_lab to true>>
+<<if $visited_ptable isnot true>>
+narrator """On one of the walls you notice a large poster.
+
+A quick qlance told you that it is the periodic table of the emelents.
+
+It reminds you of countess hours spent trying to memorise some of them, as required by the teacher."""
+
+<<set $visited_ptable is true>>
+<</if>>
+
+player """Hydrogen, Helium, Lithium, Beryllium, Boron, Carbon, Nitrogen, Oxygen, Fluorine, Neon, Sodium...
+
+Why am I inspecting periodic table?
+
+There must be something more exiting here..."""
+
+[[Step back|Game_Class_LAB]]
+
+<<if $examined_desk is true>>
+[[Check the desk|Game_Class_Lab_Desks]]
+<</if>>
+
+<<if $examined_flasks is true>>
+[[Check the flasks|Game_Class_Lab_Flasks]]
+<</if>>
+
+
