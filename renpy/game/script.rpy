@@ -1,22 +1,4 @@
-define character1 = Character("character1")
-define character2 = Character("character2")
-
+define flash = Fade(0.1, 0.0, 0.5, color="#fff")
 
 label start:
-    character1 "Siemano!"
-    jump first
-
-label first:
-    character2 "Nieprawda!"
-    menu:
-        "Nazwa":
-            jump test1
-        "Nazwa2":
-            jump test2
-
-label test1:
-    "nie powinno"
-
-label test2:
-    "powinno"
-
+    jump prologue_start

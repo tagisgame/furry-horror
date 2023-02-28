@@ -1,0 +1,1 @@
+define fox = Character("Fox", who_color="#c8b126", image="fox")

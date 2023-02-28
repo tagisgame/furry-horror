@@ -1,0 +1,1 @@
+define weasel = Character("Weasel", who_color="#6b4325", image="weasel")

@@ -1,0 +1,1 @@
+define wolf_actor = Character("Wolf", who_color="#232323", image="wolfactor.png")

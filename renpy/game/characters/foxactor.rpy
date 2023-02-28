@@ -1,0 +1,1 @@
+define fox_actor = Character("Fox", who_color="#c8b126", image="foxactor.png")

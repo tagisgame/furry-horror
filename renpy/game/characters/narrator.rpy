@@ -1,0 +1,1 @@
+define tutorial = Character(None, what_color="#00a108")
