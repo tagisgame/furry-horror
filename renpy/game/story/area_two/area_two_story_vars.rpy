@@ -8,8 +8,11 @@ label area_two_story_vars:
         vb_a2_cor_3ggym_visited = False
         vb_a2_cor_4ggym_visited = False
         vb_a2_cls_4g_visited = False
+        vb_a2_cls_3g_visited = False
         vb_a2_cls_2g_visited = False
+        vb_a2_cls_1g_visited = False
         vb_a2_cls_clkm_visited = False
+        vb_a2_cls_clkf_visited = False
         vb_a2_cls_gym_visited = False
     
         #looking around
