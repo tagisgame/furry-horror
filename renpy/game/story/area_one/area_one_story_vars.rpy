@@ -16,16 +16,22 @@ label area_one_story_vars:
         vb_a1_cls_3a_visited = False
         vb_a1_cls_1b_visited = False
         vb_a1_cls_2b_visited = False
+        vb_a1_cls_3b_visited = False
         
     
         #looking around
-        vb_a1_cls_lab_investigated = False
+        vb_a1_cls_lab_experiment = False
+        vb_a1_cls_lab_experiment_started = False
+        vb_a1_cls_lab_ptable_inspected = False
+        vb_a1_cls_lab_desk_inspected = False
         vb_a1_cls_2b_chair_checked = False
+        vb_a1_cls_3b_skeleton_examined = False
 
         #items
         vb_item_gymkey = False
         vb_item_screwdriver = False
         vb_item_flashlight = False
+        vb_item_gloves = False
 
         #states
         vb_state_injured = False
