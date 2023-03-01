@@ -11,9 +11,12 @@ label area_one_story_vars:
         vb_a1_cor_2a1blab_visited = False
         vb_a1_cor_a1labexit_visited = False
         vb_a1_cor_3a3b_visited = False
+        vb_a1_cor_ar2ar34b_visited = True
         vb_a1_cls_lab_visited = False
+        vb_a1_cls_3a_visited = False
         vb_a1_cls_1b_visited = False
         vb_a1_cls_2b_visited = False
+        
     
         #looking around
         vb_a1_cls_lab_investigated = False
@@ -22,6 +25,8 @@ label area_one_story_vars:
         #items
         vb_item_gymkey = False
         vb_item_screwdriver = False
+        vb_item_flashlight = False
 
         #states
-        vb_state_injured = True
+        vb_state_injured = False
+        vb_state_noflashlightdead = False
