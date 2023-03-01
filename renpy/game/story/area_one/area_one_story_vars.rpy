@@ -13,6 +13,7 @@ label area_one_story_vars:
         vb_a1_cor_3a3b_visited = False
         vb_a1_cor_ar2ar34b_visited = False
         vb_a1_cls_lab_visited = False
+        vb_a1_cls_1a_visited = False
         vb_a1_cls_2a_visited = False
         vb_a1_cls_3a_visited = False
         vb_a1_cls_1b_visited = False
