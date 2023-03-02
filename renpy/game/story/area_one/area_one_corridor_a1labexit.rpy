@@ -37,5 +37,5 @@ label area_one_Corridor_A1LabExit:
             jump area_one_Corridor_2A1BLab
         "Enter classroom 1A.":
             jump area_one_Classroom_1A
-        "Enter the lab."
+        "Enter the lab.":
             jump area_one_Classroom_Lab

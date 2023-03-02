@@ -6,8 +6,6 @@ label area_two_Corridor_ClkFGym:
 
         #1
 
-    else:
-        #kolejne
 
     menu:
         "Go West.":

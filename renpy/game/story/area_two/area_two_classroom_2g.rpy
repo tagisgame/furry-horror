@@ -15,7 +15,7 @@ label area_two_Classroom_2G:
     menu:
         "Leave.":
             jump area_two_Classroom_2G_Leaving
-        "Go to room 1G."
+        "Go to room 1G.":
             jump area_two_Classroom_2G_GoTo1G
 
 label area_two_Classroom_2G_Leaving:
@@ -26,7 +26,7 @@ label area_two_Classroom_2G_Leaving:
 
     jump area_two_Corridor_2GClkM4G
 
-laberl area_two_Classroom_2G_GoTo1G:
+label area_two_Classroom_2G_GoTo1G:
     scene bg black
     with dissolve
 

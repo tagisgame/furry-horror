@@ -5,9 +5,6 @@ label area_two_Corridor_2GClkM4G:
         $ vb_a2_cor_2gclkm4g_visited = True
 
         #1 wejscie
-    
-    else:
-        #kolejne
 
     menu:
         "Go north.":

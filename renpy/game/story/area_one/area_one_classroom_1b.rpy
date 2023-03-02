@@ -27,7 +27,7 @@ label area_one_Classroom_1B:
                 jump area_one_Corridor_2A1BLab
 
     elif not vb_a1_cls_1b_investigated:
-        narrator "You enter the sports class room. It might contain something interesting.
+        narrator "You enter the sports class room. It might contain something interesting."
 
         menu:
             "Take a look around.":
@@ -164,7 +164,7 @@ label area_one_Classroom_1B_UseForce:
 
     player_thinking """What the hell is that?
 
-    We've got no animals in school... The howling must come from outside.
+    We\'ve got no animals in school... The howling must come from outside.
 
     I hope so..."""
 

@@ -5,9 +5,6 @@ label area_two_Corridor_1GAreaOne:
         $ vb_a2_cor_1gar1_visited = True
 
         # Pierwsze wejście
-    
-    else:
-        #kolejne wejścia
 
     menu:
         "Go west.":

@@ -6,8 +6,6 @@ label area_two_Corridor_3GGym:
 
         #1
     
-    else:
-        #kol
 
     menu:
         "Go west.":

@@ -22,7 +22,7 @@ label area_one_Classroom_Lab:
 
         player_thinking "Why does it looks so creepy..."
 
-        Narrator """The laboratory reminds you of the interior of lunatic asylums you saw in countless horrors. 
+        narrator """The laboratory reminds you of the interior of lunatic asylums you saw in countless horrors. 
 
         You never noticed that similarity until you had a chance to visit this class in almost pure darkness.
 
@@ -74,7 +74,7 @@ label area_one_Classroom_Lab:
             "Leave through the northern door.":
                 jump area_one_Corridor_2A1BLab
             "Leave through the southern door.":
-                jumpa area_one_Corridor_A1LabExit
+                jump area_one_Corridor_A1LabExit
 
     elif not vb_a1_cls_lab_experiment:
         narrator """You are yet again treated with a strong chemical smell.
@@ -95,7 +95,7 @@ label area_one_Classroom_Lab:
             "Leave through the northern door.":
                 jump area_one_Corridor_2A1BLab
             "Leave through the southern door.":
-                jumpa area_one_Corridor_A1LabExit
+                jump area_one_Corridor_A1LabExit
     else:
         narrator """You are yet again treated with a strong chemical smell.
 
@@ -105,7 +105,7 @@ label area_one_Classroom_Lab:
             "Leave through the northern door.":
                 jump area_one_Corridor_2A1BLab
             "Leave through the southern door.":
-                jumpa area_one_Corridor_A1LabExit
+                jump area_one_Corridor_A1LabExit
 
 label area_one_Classroom_Lab_Desk:
     if not vb_a1_cls_lab_desk_inspected:
@@ -130,11 +130,11 @@ label area_one_Classroom_Lab_Desk:
             "Leave.":
                 pass
 
-        menu:
-            "Leave through the northern door.":
-                jump area_one_Corridor_2A1BLab
-            "Leave through the southern door.":
-                jumpa area_one_Corridor_A1LabExit
+    menu:
+        "Leave through the northern door.":
+            jump area_one_Corridor_2A1BLab
+        "Leave through the southern door.":
+            jump area_one_Corridor_A1LabExit
 
 label area_one_Classroom_Lab_Ptable:
     if not vb_a1_cls_lab_ptable_inspected:
@@ -165,7 +165,7 @@ label area_one_Classroom_Lab_Ptable:
         "Leave through the northern door.":
             jump area_one_Corridor_2A1BLab
         "Leave through the southern door.":
-            jumpa area_one_Corridor_A1LabExit
+            jump area_one_Corridor_A1LabExit
 
 
 label area_one_Classroom_Lab_Chem:
@@ -187,12 +187,12 @@ label area_one_Classroom_Lab_Chem:
 
         What does that mean?"""
 
-        jump area_one_Classroom_Lab_Chem_Options
+    jump area_one_Classroom_Lab_Chem_Options
 
 label area_one_Classroom_Lab_Chem_StepBack:
     narrator "You take a step back."
 
-     menu:
+    menu:
         "Examine the flasks.":
             jump area_one_Classroom_Lab_Chem
         "Inspect the desk.":
@@ -204,7 +204,7 @@ label area_one_Classroom_Lab_Chem_StepBack:
         "Leave through the northern door.":
             jump area_one_Corridor_2A1BLab
         "Leave through the southern door.":
-            jumpa area_one_Corridor_A1LabExit
+            jump area_one_Corridor_A1LabExit
 
 label area_one_Classroom_Lab_Chem_Options:
     if vi_experiment_current_flask >= 3:
@@ -223,35 +223,39 @@ label area_one_Classroom_Lab_Chem_Options:
             jump area_one_Classroom_Lab_Chem_StepBack
 
 label area_one_Classroom_Lab_Chem_PourH:
-    $ varr_experiment_mixture[vi_experiment_current_flask++] = "H"
+    $ varr_experiment_mixture[vi_experiment_current_flask] = "H"
+    $ vi_experiment_current_flask += 1
 
     narrator "You added contents of the flask with \"H\" into the big flask."
 
     jump area_one_Classroom_Lab_Chem_Options
 
 label area_one_Classroom_Lab_Chem_PourC:
-    $ varr_experiment_mixture[vi_experiment_current_flask++] = "C"
+    $ varr_experiment_mixture[vi_experiment_current_flask] = "C"
+    $ vi_experiment_current_flask += 1
 
     narrator "You added contents of the flask with \"C\" into the big flask."
 
     jump area_one_Classroom_Lab_Chem_Options
 
 label area_one_Classroom_Lab_Chem_PourF:
-    $ varr_experiment_mixture[vi_experiment_current_flask++] = "F"
+    $ varr_experiment_mixture[vi_experiment_current_flask] = "F"
+    $ vi_experiment_current_flask += 1
 
     narrator "You added contents of the flask with \"F\" into the big flask."
 
     jump area_one_Classroom_Lab_Chem_Options
 
 label area_one_Classroom_Lab_Chem_PourO:
-    $ varr_experiment_mixture[vi_experiment_current_flask++] = "O"
+    $ varr_experiment_mixture[vi_experiment_current_flask] = "O"
+    $ vi_experiment_current_flask += 1
 
     narrator "You added contents of the flask with \"O\" into the big flask."
 
     jump area_one_Classroom_Lab_Chem_Options
 
 label area_one_Classroom_Lab_Chem_Result:
-    vb_a1_cls_lab_experiment = True
+    $ vb_a1_cls_lab_experiment = True
 
     if varr_experiment_mixture[0] = "H" and varr_experiment_mixture[1] = "C" and varr_experiment_mixture[2] = "O":
         $ vb_item_gloves = True
@@ -290,4 +294,4 @@ label area_one_Classroom_Lab_Chem_Result:
         "Leave through the northern door.":
             jump area_one_Corridor_2A1BLab
         "Leave through the southern door.":
-            jumpa area_one_Corridor_A1LabExit
+            jump area_one_Corridor_A1LabExit
