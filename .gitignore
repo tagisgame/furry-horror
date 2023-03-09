@@ -243,3 +243,9 @@ $RECYCLE.BIN/
 
 #twine output
 tweego/output/*.html
+
+#renpy dist folder
+*-dists/
+
+#vscode config?
+.vscode/
