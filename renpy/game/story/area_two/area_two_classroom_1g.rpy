@@ -12,14 +12,14 @@ label area_two_Classroom_1G:
     if not vb_a2_cls_1g_visited:
         $ vb_a2_cls_1g_visited = True
 
-        narrator """You notice that in this room is flooded.
+        narrator """You notice that the room is flooded.
         
-        Your sneakers got slightly soaked."""
+        Your sneakers got slightly wet."""
 
         menu:
             "Leave.":
                jump area_two_Classroom_1G_Leaving
-            "Go to room 1G.":
+            "Go to room 2G.":
                 jump area_two_Classroom_1G_GoTo2G
             "Inspect the room thoroughly.":
                 jump area_two_Classroom_1g_Inspect
@@ -29,7 +29,7 @@ label area_two_Classroom_1g_Inspect:
     scene bg areatwo classroom1g
 
     if not vb_a2_cls_1g_inspected:
-    
+        $ vb_a2_cls_1g_inspected = True
 
         narrator """Your first instinct is to check for the liquid that covers the entire floor.
     
@@ -54,7 +54,7 @@ label area_two_Classroom_1g_Inspect:
         menu:
             "Leave.":
                 jump area_two_Classroom_1G_Leaving
-            "Go to room 1G.":
+            "Go to room 2G.":
                 jump area_two_Classroom_1G_GoTo2G
             "Check the computer.":
                 jump area_two_Classroom_1G_Computer
@@ -66,13 +66,14 @@ label area_two_Classroom_1g_Inspect:
         menu:
             "Leave.":
                 jump area_two_Classroom_1G_Leaving
-            "Go to room 1G.":
+            "Go to room 2G.":
                 jump area_two_Classroom_1G_GoTo2G
 
 
 
 
 label area_two_Classroom_1G_Computer:
+    scene bg areatwo classroom1g
     $ vb_a2_cls_1g_inspected = True
 
     if not vb_item_gloves:
@@ -119,7 +120,7 @@ label area_two_Classroom_1G_Computer:
     menu:
         "Leave.":
             jump area_two_Classroom_1G_Leaving
-        "Go to room 1G.":
+        "Go to room 2G.":
             jump area_two_Classroom_1G_GoTo2G
 
 label area_two_Classroom_1G_Leaving:

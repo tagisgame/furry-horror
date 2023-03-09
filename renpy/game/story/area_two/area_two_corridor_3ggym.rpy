@@ -21,7 +21,7 @@ label area_two_Corridor_3GGym:
         narrator "You come to the end of the hall with a faint, blood-red light emanating from beneath the gym doors."
 
     menu:
-        "Go west.":
+        "Go east.":
             jump area_two_Corridor_3G
         "Enter room 3G.":
             jump area_two_Classroom_3G

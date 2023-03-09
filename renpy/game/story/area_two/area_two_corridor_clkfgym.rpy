@@ -3,9 +3,6 @@
 label area_two_Corridor_ClkFGym:
     scene bg areatwo corridor
 
-    $ vb_a2_ent_from_clkfgym = True
-    $ vb_a2_ent_from_4ggym = False
-
     if not vb_a2_cor_clkfgym_visited:
         $ vb_a2_cor_clkfgym_visited = True
 
@@ -22,9 +19,9 @@ label area_two_Corridor_ClkFGym:
         narrator "You enter the part of the corridor with the doors used by the creature."
 
     menu:
-        "Go West.":
+        "Go west.":
             jump area_two_Corridor_3G
-        "Go East.":
+        "Go east.":
             jump area_two_Corridor_2GClkM4G
         "Enter the female cloakroom.":
             jump area_two_Classroom_ClkF
@@ -44,7 +41,7 @@ label area_two_Classroom_Gym_Entering_clkfgym:
     
     Suddenly a huge, hairy figure appears in front of you.
     
-    You can't see her face, or rather her muzzle, but her fangs gleam snow-white.
+    You can't see its face, or rather the muzzle, but the figure's fangs gleam snow-white.
 
     You try to scream but your mouth makes no sound.
 
@@ -54,4 +51,14 @@ label area_two_Classroom_Gym_Entering_clkfgym:
 
     Your flashlight rolls on the ground, pointing its beam at you, blinding you one last time"""
 
-    #śmierć
+    tutorial """For the record...
+    
+    {i}This is the death screen{i} {w} You can go back to the last decision, or start over."""
+
+    $ vb_a2_cor_clkfgym_visited = False
+
+    menu:
+        "Revert my decision.":
+            jump area_two_Corridor_ClkFGym
+        "Start over.":
+            jump game_start

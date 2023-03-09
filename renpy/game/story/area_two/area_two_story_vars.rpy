@@ -14,6 +14,7 @@ label area_two_story_vars:
         vb_a2_cls_clkm_visited = False
         vb_a2_cls_clkf_visited = False
         vb_a2_cls_gym_visited = False
+        vb_a2_cls_g3_visited = False
     
         #looking around
         vb_a2_cls_4g_inspected = False
@@ -21,6 +22,6 @@ label area_two_story_vars:
         vb_a2_cls_3g_inspected = False
 
         #items
-        
+        vb_item_janitorKey = False
 
         #states  

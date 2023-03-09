@@ -39,4 +39,4 @@ label area_two_Corridor_1GAreaOne:
         "Enter room 1G":
             jump area_two_Classroom_1G
         "Enter the main building.":
-            jump area_one_Corridor_AreaTwo
+            jump area_one_Corridor_AreatwoAreathree4B

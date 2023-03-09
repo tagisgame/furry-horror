@@ -1,4 +1,4 @@
-# [DONE]
+# room in loop
 
 label area_one_Classroom_1B:
     scene bg areaone classroom
@@ -50,6 +50,8 @@ label area_one_Classroom_1B:
                 jump area_one_Corridor_2A1BLab
     
 label area_one_Classroom_1B_LookAround:
+    $ vb_a1_cls_1b_investigated = True
+
     narrator """After examining the room you notice a few file cabinets that pick your attention.
 
     Searching them you find various documents concerning every single competition the sports class took part.

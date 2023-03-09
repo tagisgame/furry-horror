@@ -58,10 +58,12 @@ label area_two_Classroom_Gym_BSDoors:
     if not vb_item_janitorKey:
 
         narrator "You cowardly leave the gym."
+        jump area_two_Corridor_3GGym
 
     else:
 
         narrator "You escape the creature just in time. Now is the time to escape the school."
+        jump area_two_Corridor_3GGym
 
 label area_two_Classroom_Gym_Janitor:
 
@@ -112,7 +114,7 @@ label area_two_Classroom_Gym_Monster:
 
     menu:
         "Revert my decision.":
-            jump area_two_Classroom_1G
+            jump area_two_Classroom_Gym
         "Start over.":
             jump game_start
 
@@ -161,7 +163,7 @@ label area_two_Classroom_Gym_Escape_Backstage:
     
     player "Fuck, that was close... I need to get out of this place"
 
-    jump area_two_Classroom_Gym_BSDoors
+    jump area_two_Corridor_3GGym
 
 label area_two_Classroom_Gym_Escape_BlockedDoor:
 

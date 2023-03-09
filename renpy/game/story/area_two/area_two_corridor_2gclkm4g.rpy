@@ -22,7 +22,7 @@ label area_two_Corridor_2GClkM4G:
 
     menu:
         "Go north.":
-            jump area_two_Corridor_4gGym
+            jump area_two_Corridor_4GGym
         "Go east.":
             jump area_two_Corridor_1GAreaOne
         "Go west.":
