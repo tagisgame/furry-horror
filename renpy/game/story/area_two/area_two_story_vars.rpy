@@ -17,9 +17,10 @@ label area_two_story_vars:
     
         #looking around
         vb_a2_cls_4g_inspected = False
+        vb_a2_cls_1g_inspected = False
+        vb_a2_cls_3g_inspected = False
 
         #items
         
 
-        #states
-        
+        #states  
