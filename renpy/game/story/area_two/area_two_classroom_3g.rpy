@@ -19,27 +19,27 @@ label area_two_Classroom_3G:
         Some of them had to be moved to the gym, and the other is scattered around as if they were looking for something specific."""
 
 
-    menu:
-        "Inspect the room.":
-            jump area_two_Classroom_3G_Inspecting
-        "Leave through the eastern door.":
-            jump area_two_Classroom_3G_LeavingE
-        "Leave through the western door.":
-            jump area_two_Classroom_3G_LeavingW
+        menu:
+            "Inspect the room.":
+                jump area_two_Classroom_3G_Inspecting
+            "Leave through the eastern door.":
+                jump area_two_Classroom_3G_LeavingE
+            "Leave through the western door.":
+                jump area_two_Classroom_3G_LeavingW
 
     else:
 
         narrator "You enter the class for the drama club."
 
-    menu:
-        "Inspect the room." if not vb_a2_cls_3g_inspected:
-            jump area_two_Classroom_3G_Inspecting
-        "Leave through the eastern door.":
-            jump area_two_Classroom_3G_LeavingE
-        "Leave through the western door.":
-            jump area_two_Classroom_3G_LeavingW
+        menu:
+            "Inspect the room." if not vb_a2_cls_3g_inspected:
+                jump area_two_Classroom_3G_Inspecting
+            "Leave through the eastern door.":
+                jump area_two_Classroom_3G_LeavingE
+            "Leave through the western door.":
+                jump area_two_Classroom_3G_LeavingW
 
-area_two_Classroom_3G_Inspecting
+label area_two_Classroom_3G_Inspecting:
     $ vb_a2_cls_3g_inspected = True
 
     narrator """You search through the other boxes, but these have nothing useful in them.

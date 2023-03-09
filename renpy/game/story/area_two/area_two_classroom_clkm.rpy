@@ -26,9 +26,9 @@ label area_two_Classroom_ClkM:
         
         Unfortunately for you, the jacket is empty and seems to smell like it belongs to some homeless person."""
         
-            menu:
-        "Leave.":
-            jump area_two_Classroom_ClkM_Leaving
+        menu:
+            "Leave.":
+                jump area_two_Classroom_ClkM_Leaving
 
     else:
         

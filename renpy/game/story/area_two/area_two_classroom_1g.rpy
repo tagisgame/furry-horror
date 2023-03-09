@@ -18,13 +18,13 @@ label area_two_Classroom_1G:
         menu:
             "Leave.":
                jump area_two_Classroom_1G_Leaving
-         "Go to room 1G.":
+            "Go to room 1G.":
                 jump area_two_Classroom_1G_GoTo2G
-          "Inspect the room thoroughly.":
+            "Inspect the room thoroughly.":
                 jump area_two_Classroom_1g_Inspect
 
 
-label area_two_Classroom_1g_Inspect
+label area_two_Classroom_1g_Inspect:
     scene bg areatwo classroom1g
 
     if not vb_a2_cls_1g_inspected:
@@ -50,7 +50,7 @@ label area_two_Classroom_1g_Inspect
     
         I could use it..."""
 
-                menu
+        menu:
             "Leave.":
                 jump area_two_Classroom_1G_Leaving
             "Go to room 1G.":
@@ -62,7 +62,7 @@ label area_two_Classroom_1g_Inspect
 
         narrator "There is nothing interesting left in this room."
 
-                menu
+        menu:
             "Leave.":
                 jump area_two_Classroom_1G_Leaving
             "Go to room 1G.":
@@ -71,7 +71,7 @@ label area_two_Classroom_1g_Inspect
 
 
 
-label area_two_Classroom_1G_Computer
+label area_two_Classroom_1G_Computer:
     $ vb_a2_cls_1g_inspected = True
 
     if not vb_item_gloves:

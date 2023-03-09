@@ -53,7 +53,7 @@ label area_two_Classroom_Gym:
                 jump area_two_Classroom_Gym_BSDoors
 
 
-label area_two_Classroom_Gym_BSDoors
+label area_two_Classroom_Gym_BSDoors:
 
     if not vb_item_janitorKey:
 
@@ -63,7 +63,7 @@ label area_two_Classroom_Gym_BSDoors
 
         narrator "You escape the creature just in time. Now is the time to escape the school."
 
-label area_two_Classroom_Gym_Janitor
+label area_two_Classroom_Gym_Janitor:
 
     narrator """You slowly slide between the chairs so that you can hide behind them if necessary.
     
@@ -84,7 +84,7 @@ label area_two_Classroom_Gym_Janitor
         "Approach the monster":
             jump area_two_Classroom_Gym_Monster
 
-label area_two_Classroom_Gym_Monster
+label area_two_Classroom_Gym_Monster:
 
     narrator "You slowly stand up and try to reach the monster."
 
@@ -103,28 +103,28 @@ label area_two_Classroom_Gym_Monster
     With the last of your strength, you were able to see, and certainly feel, his other hand sink into your chest, rip your heart out of you and obscenely drink your warm, freshly oxygenated blood."""
 
 
-label area_two_Classroom_Gym_Janitor_Keys
+label area_two_Classroom_Gym_Janitor_Keys:
 
     $ vb_item_janitorKey = True
 
-        narrator """You grab the janitor's keys, slowly unfasten them from his belt - not so as not to make a noise, but because your hands are shaking with stress like never before.
+    narrator """You grab the janitor's keys, slowly unfasten them from his belt - not so as not to make a noise, but because your hands are shaking with stress like never before.
         
-        The keychain is quite large and the keys are not marked - it will take a while to find the right one.
+    The keychain is quite large and the keys are not marked - it will take a while to find the right one.
         
-        However you know that it will be safer to check them at the door itself, away from this creature.
+    However you know that it will be safer to check them at the door itself, away from this creature.
         
-        You remember that the gym has three exits.
+    You remember that the gym has three exits.
         
-        One is guarded by a monster, the other - the one you entered with - is on the other side, and the third one very close to you is blocked by a chair."""
+    One is guarded by a monster, the other - the one you entered with - is on the other side, and the third one very close to you is blocked by a chair."""
 
-        menu:
-            "Escape through backstage door.":
-                jump area_two_Classroom_Gym_Escape_Backstage
-            "Escape through blocked door":
-                jump area_two_Classroom_Gym_Escape_BlockedDoor
+    menu:
+        "Escape through backstage door.":
+            jump area_two_Classroom_Gym_Escape_Backstage
+        "Escape through blocked door":
+            jump area_two_Classroom_Gym_Escape_BlockedDoor
 
 
-label area_two_Classroom_Gym_Escape_Backstage
+label area_two_Classroom_Gym_Escape_Backstage:
 
     narrator """Having taken the keys from the janitor, you begin to slowly backtrack to the door behind the backstage.
     
@@ -150,7 +150,7 @@ label area_two_Classroom_Gym_Escape_Backstage
 
     jump area_two_Classroom_Gym_BSDoors
 
-label area_two_Classroom_Gym_Escape_BlockedDoor
+label area_two_Classroom_Gym_Escape_BlockedDoor:
 
     if not vb_state_injured:
 

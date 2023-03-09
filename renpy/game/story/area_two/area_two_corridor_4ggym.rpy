@@ -22,7 +22,7 @@ label area_two_Corridor_4GGym:
 
     else:
         
-        narrator """The sticky substance is still there, blocking the window.""""
+        narrator """The sticky substance is still there, blocking the window."""
 
     menu:
         "Go south.":

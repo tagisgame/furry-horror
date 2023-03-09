@@ -20,17 +20,16 @@ label area_two_Classroom_ClkF:
 
         These pleasant smells make you want to stay in this place, but you know you have to find a way out of this school."""
 
-    menu:
-        "Leave.":
-            jump area_two_Classroom_ClkF_Leaving
+        menu:
+            "Leave.":
+                jump area_two_Classroom_ClkF_Leaving
 
     else:
-        
         narrator "You enter a wonderfully scented women's cloakroom."
 
-    menu:
-        "Leave.":
-            jump area_two_Classroom_ClkF_Leaving
+        menu:
+            "Leave.":
+                jump area_two_Classroom_ClkF_Leaving
 
 label area_two_Classroom_ClkF_Leaving:
     scene bg black
