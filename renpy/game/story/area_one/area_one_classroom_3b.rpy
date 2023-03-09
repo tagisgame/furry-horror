@@ -22,7 +22,7 @@ label area_one_Classroom_3B:
 
         If I recall correctly some studends called this skelly \"Bob\"
 
-        A weird habbit to name dead objects... Especcialy if it's a HUMAN SKELETON!
+        A strange habit to name inanimate objects... Especially if it's a HUMAN SKELETON!
 
         Well, at least it's not a furry costume..."""
 

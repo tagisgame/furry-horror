@@ -4,7 +4,7 @@ label area_one_Classroom_3A:
     scene bg black
     with dissolve
 
-    narrator "You enter the classroom of everyone's favourite teacher - Mrs. Garlcik."
+    narrator "You enter the classroom of everyone's favourite teacher - Mrs. Garlick."
 
     scene bg areaone classroom
     with dissolve
@@ -12,13 +12,13 @@ label area_one_Classroom_3A:
     if not vb_a1_cls_3a_visited:
         $ vb_a1_cls_3a_visited = True
 
-        narrator """She's a rather veird persona that prides herself on her survival skills.
+        narrator """She's a rather weird persona that prides herself on her survival skills.
 
         No one would ever suspect her of such abilities because she looks like a frail woman.
         
         It's an ordinary class like many in this school. 
 
-        Empty desks seem to wait patiently for students, the board is ready to write down the next topic...
+        Empty desks seem to wait patiently for students, the board is ready to be written on regarding the next lesson...
 
         Only the teacher's desk catches your attention - on it you find a handbag that seems to belong to Mrs. Garlick."""
 
@@ -57,7 +57,7 @@ label area_one_Classroom_3A_InspectBag:
 
     player "Ouch!"
 
-    player_thinking """Wasn't expecting it being THAT STRONG.
+    player_thinking """Wasn't expecting it to be THAT STRONG.
 
     It literally illuminates the whole class!"""
 
