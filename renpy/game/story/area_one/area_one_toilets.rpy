@@ -1,5 +1,6 @@
 label game_start:
     call area_one_story_vars from _call_area_one_story_vars
+    call area_two_story_vars from _call_area_two_story_vars
 
     jump area_one_ToiletStall_Start
 

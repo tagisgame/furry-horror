@@ -1,4 +1,5 @@
-# [To check - done]
+# [DONE]
+
 label area_two_Classroom_1G:
     scene bg black
     with dissolve
@@ -85,6 +86,19 @@ label area_two_Classroom_1G_Computer:
         You don't have time to react and you see a huge spark jump into your hand and the strip itself starts to burn.
         
         The dose of electricity you took surprisingly turned out to be lethal, your electrocuted body trembles, and the room bursts into flames."""
+
+        tutorial """For the record...
+    
+        {i}This is the death screen{i} {w} You can go back to the last decision, or start over."""
+
+        $ vb_a2_cls_1g_inspected = False
+        $ vb_a2_cls_1g_visited = False
+
+        menu:
+            "Revert my decision.":
+                jump area_two_Classroom_1G
+            "Start over.":
+                jump game_start
 
     else:
         player_thinking """Hmm... Quite an old computer, probably Windows 95...

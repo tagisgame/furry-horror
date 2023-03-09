@@ -1,4 +1,4 @@
-#trzeci z lewej
+# [DONE]
 
 label area_two_Classroom_ClkM:
     scene bg black

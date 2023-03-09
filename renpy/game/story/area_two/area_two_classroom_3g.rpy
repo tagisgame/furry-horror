@@ -1,4 +1,4 @@
-#piąty z lewej
+# [DONE]
 
 label area_two_Classroom_3G:
     scene bg black

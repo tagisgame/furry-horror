@@ -1,4 +1,4 @@
-# add death on line 187 - done
+# [DONE]
 
 label area_two_Classroom_Gym:
     scene bg black
@@ -103,6 +103,19 @@ label area_two_Classroom_Gym_Monster:
     With the last of your strength, you were able to see, and certainly feel, his other hand sink into your chest, rip your heart out of you and obscenely drink your warm, freshly oxygenated blood."""
 
 
+    tutorial """For the record...
+    
+    {i}This is the death screen{i} {w} You can go back to the last decision, or start over."""
+
+    $ vb_a2_cls_gym_visited = False
+    $ vb_item_janitorKey = False
+
+     menu:
+        "Revert my decision.":
+            jump area_two_Classroom_1G
+        "Start over.":
+            jump game_start
+
 label area_two_Classroom_Gym_Janitor_Keys:
 
     $ vb_item_janitorKey = True
@@ -186,5 +199,16 @@ label area_two_Classroom_Gym_Escape_BlockedDoor:
         
         The last thing you feel is the monster's fangs sinking into your neck."""
 
-        #death
+        tutorial """For the record...
+    
+        {i}This is the death screen{i} {w} You can go back to the last decision, or start over."""
+
+        $ vb_a2_cls_gym_visited = False
+        $ vb_item_janitorKey = False
+
+        menu:
+            "Revert my decision.":
+                jump area_two_Classroom_Gym
+            "Start over.":
+                jump game_start
 
