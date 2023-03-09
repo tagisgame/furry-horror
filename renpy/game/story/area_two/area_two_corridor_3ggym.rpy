@@ -25,11 +25,12 @@ label area_two_Corridor_3GGym:
             jump area_two_Corridor_3G
         "Enter room 3G.":
             jump area_two_Classroom_3G
-        "Enter the gym.":
+        "Enter the gym." if not vb_item_janitorKey:
             jump area_two_Classroom_Gym_Entering_3ggym
 
 label area_two_Classroom_Gym_Entering_3ggym:
     scene bg areatwo corridor
+
 
     if not vb_item_gymkey:
 
@@ -41,7 +42,7 @@ label area_two_Classroom_Gym_Entering_3ggym:
 
         jump area_two_Corridor_3GGym
 
-    else
+    else:
 
         narrator """You open the door with the key you found previously.
 

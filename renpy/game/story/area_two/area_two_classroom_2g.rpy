@@ -1,3 +1,6 @@
+#drugi z lewej
+
+
 label area_two_Classroom_2G:
     scene bg black
     with dissolve
@@ -10,12 +13,22 @@ label area_two_Classroom_2G:
     if not vb_a2_cls_2g_visited:
         $ vb_a2_cls_2g_visited = True
 
-        #pierwsze wejscie
+        narrator """You enter a room that was intended to store exercise equipment.
+        
+        The shelves are filled with various rackets, darts, balls and various other equipment that you are unable to name.
+        
+        After all, you were never a sports fan.
+        
+        You've been sent here a few times during class, and you know there's nothing of interest here."""
+
+    else:
+
+        narrator "You enter the storage for exercise equipment. There is nothing interesing."
 
     menu:
         "Leave.":
             jump area_two_Classroom_2G_Leaving
-        "Go to room 1G."
+        "Go to room 1G.":
             jump area_two_Classroom_2G_GoTo1G
 
 label area_two_Classroom_2G_Leaving:

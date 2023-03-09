@@ -29,7 +29,7 @@ label area_two_Corridor_4GGym:
             jump area_two_Corridor_2GClkM4G
         "Enter room 4G.":
             jump area_two_Classroom_4G
-        "Enter the gym.":
+        "Enter the gym." if not vb_item_janitorKey:
             jump area_two_Classroom_Gym_Entering_4ggym
 
 label area_two_Classroom_Gym_Entering_4ggym:
