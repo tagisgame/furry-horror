@@ -1,5 +1,5 @@
 label game_start:
-    call area_one_story_vars from _call_area_one_story_vars
+    call area_one_story_vars
 
     jump area_one_ToiletStall_Start
 
@@ -14,12 +14,12 @@ label area_one_ToiletStall_Start:
 
     narrator """You wake up in a cold toilet stall engrossed in darkness. You can't remember what has happened.
 
-    You have a terrible headache trying to recall anything that led to this particular moment."""
+    You have a terrible headache trying to remember anything that led to this particular moment."""
 
     if not vb_a1_toilets_player_start_over:
         player_thinking """Ah crap... Well, it seems I'm still at school.
 
-        Why did nobody come to help me? Didn't they notice someone has fainted in a toilet stall?
+        Why nobody came to help me? Didn't they notice someone has fainted in a toilet stall?
 
         So I guess my hiding spot indeed works. That was the point of it after all."""
 
@@ -117,11 +117,9 @@ label area_one_Toilets_StayedDeath:
 
     narrator """Your eyes fill up with blood. You feel sharp pain on your face.
 
-    You try to scream, but the blood clogs your throat.
-    
-    There is no face of yours any more.
+    You try to scream, but there is a hole in your neck. There is no face of yours any more.
 
-    You lay lifeless on the floor in a puddle of blood.
+    You lay lifeless on the floor in a puddle of blood that came straight from your carotid artery.
 
     That's all. This is how your story ends."""
 
@@ -133,7 +131,7 @@ label area_one_Toilets_StayedDeath:
 
     An additional content, right?
 
-    Well, you got it. Are you happy now?
+    Well, you get it. Are you happy now?
 
     This is your additional content, there you go. You died. That's the scene you were looking for?
 
@@ -173,11 +171,9 @@ label area_one_Toilets:
 
         I should turn on the lights."""
 
-        narrator """The moment you tried to turn on the lights you witnessed a strange scenery. The entire restroom seemed to be covered in blood and a strange black goo.
+        narrator """The moment you turned on the lights you witnessed a strange scenery. The entire restroom seemed to be covered in blood and a strange black goo.
 
-        This vison lasted only a second, after a short while it all disappeared.
-        
-        The light didn't turn on."""
+        This vison lasted only a second, and as your eyes got used to the light it all disappeared."""
 
         player "WHAT THE HELL..."
 

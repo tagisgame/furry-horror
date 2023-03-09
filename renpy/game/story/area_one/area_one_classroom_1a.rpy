@@ -8,7 +8,7 @@ label area_one_Classroom_1A:
     with dissolve
 
     if not vb_a1_cls_1a_visited:
-        $ vb_a1_cls_1a_visite = True
+        $ vb_a1_cls_1a_visited = True
 
         narrator """You enter the darkest room you have encountered so far.
 

@@ -1,7 +1,7 @@
 # [DONE]
 
 label area_one_Corridor_Toilets2B:
-    scene bg area one corridor
+    scene bg areaone corridor
     with dissolve
 
     if not vb_a1_cor_toilets2b_visited:

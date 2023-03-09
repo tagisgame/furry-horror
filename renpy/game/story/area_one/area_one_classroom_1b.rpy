@@ -122,6 +122,8 @@ label area_one_Classroom_1B_UseScrewdriver:
 
     player_thinking "Hey, that's the key the P.E. teacher uses to let us in into the gym!"
 
+    narrator "You get the {b}key to the gym{/b}."
+
     menu:
         "Leave.":
             jump area_one_Corridor_2A1BLab
@@ -138,6 +140,8 @@ label area_one_Classroom_1B_UseKey:
     You reach out for him and notice that it has a rugby ball keychain"""
 
     player_thinking "Hey, that's the key the P.E. teacher uses to let us in into the gym!"
+
+    narrator "You get the {b}key to the gym{/b}."
 
     menu:
         "Leave.":
@@ -161,6 +165,8 @@ label area_one_Classroom_1B_UseForce:
     Trying to stop the bleeding, you hold your wound with your hand, look at the contents of the cupboard and notice one item: keys with a rugby ball keychain.
 
     You grab the key and hear some sort of howling comming from the depths of the school."""
+
+    narrator "You get the {b}key to the gym{/b}."
 
     player_thinking """What the hell is that?
 

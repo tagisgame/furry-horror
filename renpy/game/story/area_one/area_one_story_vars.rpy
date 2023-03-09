@@ -22,6 +22,7 @@ label area_one_story_vars:
         
     
         #looking around
+        vb_a1_cls_1b_investigated = False
         vb_a1_cls_lab_experiment = False
         vb_a1_cls_lab_experiment_started = False
         vb_a1_cls_lab_ptable_inspected = False
@@ -30,6 +31,7 @@ label area_one_story_vars:
         vb_a1_cls_3b_skeleton_examined = False
 
         #items
+        vb_item_1bkey = False
         vb_item_gymkey = False
         vb_item_screwdriver = False
         vb_item_flashlight = False

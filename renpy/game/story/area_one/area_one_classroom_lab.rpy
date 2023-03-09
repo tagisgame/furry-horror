@@ -22,9 +22,9 @@ label area_one_Classroom_Lab:
 
         player_thinking "Why does it looks so creepy..."
 
-        narrator """The laboratory reminds you of the interior of lunatic asylums you saw in countless horrors. 
+        narrator """The laboratory reminds you of the interior of mental asylums you've seen in countless horrors. 
 
-        You never noticed that similarity until you had a chance to visit this class in almost pure darkness.
+        You never noticed that similarity until you had a chance to visit this class engulfed in a complete darkness.
 
         Looking around you notice some flasks on the teacher's desk.
 
@@ -38,13 +38,13 @@ label area_one_Classroom_Lab:
             "Contine looking around.":
                 pass
         
-        narrator """Overall the class is tidy. Every student left his desk in a perfect condition.
+        narrator """Overall the class is tidy. Every student left their desk in a perfect condition.
 
         Yet, on the back of the class you notice one desk that stands out.
 
         It appears that one student left all his belongings. 
 
-        His desk look like he never left the class - it is prepared for the upcoming lesson."""
+        The desk look like their never left the class - it is prepared for the upcoming lesson."""
 
         menu:
             "Inspect the desk.":
@@ -109,11 +109,13 @@ label area_one_Classroom_Lab:
 
 label area_one_Classroom_Lab_Desk:
     if not vb_a1_cls_lab_desk_inspected:
-        narrator """After going through one student's notes you find some statements about the experiment.
+        narrator """After going through some student's notes you find various statements about an experiment.
 
-        One being the result. Or at least it looks like one, hovewer the student's chicken scratch handwriting makes it impossible to read.
+        One sentence being the result. Or at least it looks like one.
+        
+        However, the student's chicken scratch handwriting makes it impossible to read.
 
-        The second note is no better, but you are able to read several words:
+        The second note is no better, but you are able to read a few words:
 
         \"Properly\", \"conduct\", \"pour ingredients\", \"order\".
         """
@@ -142,15 +144,15 @@ label area_one_Classroom_Lab_Ptable:
 
         narrator """On one of the walls you notice a large poster.
 
-        A quick qlance told you that it is the periodic table of the emelents.
+        A quick qlance told you that it is the periodic table of the elements.
 
         It reminds you of countess hours spent trying to memorise some of them, as required by the teacher."""
 
     player "Hydrogen, Helium, Lithium, Beryllium, Boron, Carbon, Nitrogen, Oxygen, Fluorine, Neon, Sodium..."
 
-    player_thinking """Why am I inspecting periodic table?
+    player_thinking """Why am I inspecting the periodic table?
 
-    There must be something more exiting here..."""
+    There must be something more exciting here..."""
 
 
     menu:
@@ -207,7 +209,7 @@ label area_one_Classroom_Lab_Chem_StepBack:
             jump area_one_Corridor_A1LabExit
 
 label area_one_Classroom_Lab_Chem_Options:
-    if vi_experiment_current_flask >= 3:
+    if vi_experiment_current_flask > 3:
         jump area_one_Classroom_Lab_Chem_Result
 
     menu:
@@ -257,7 +259,7 @@ label area_one_Classroom_Lab_Chem_PourO:
 label area_one_Classroom_Lab_Chem_Result:
     $ vb_a1_cls_lab_experiment = True
 
-    if varr_experiment_mixture[0] = "H" and varr_experiment_mixture[1] = "C" and varr_experiment_mixture[2] = "O":
+    if varr_experiment_mixture[0] == "H" and varr_experiment_mixture[1] == "C" and varr_experiment_mixture[2] == "O":
         $ vb_item_gloves = True
         narrator """As you mix the solution you notice it changed its colour to dark red.
 
@@ -269,7 +271,7 @@ label area_one_Classroom_Lab_Chem_Result:
 
         player "HA, I MADE A VOLCANOOOOO!"
 
-        narrator """Filled with joy you start to preforme your favourite dance - macarena.
+        narrator """Filled with joy you start to perform your favourite dance - macarena.
 
         Your clumsiness awakes..
 
@@ -277,7 +279,9 @@ label area_one_Classroom_Lab_Chem_Result:
 
         As the solution spreads you notice a small box laying on the ground
 
-        Inside this box you find a pair of anti-surge gloves"""
+        Inside this box you find a pair of {b}anti-surge gloves{/b}.
+        
+        You take the gloves."""
     
     else:
         narrator """As you mix the solution you start to notice it is somehow boiling.
@@ -286,9 +290,13 @@ label area_one_Classroom_Lab_Chem_Result:
 
         A beautiful color show is calming and you tilt your face to see it better.
 
-        Before you get a chance to react the solution erupted straight into you face.
+        Before you get a chance to react the solution starts erupting straight towards you face.
 
-        Hot and corrosive substance covered you face, as you tremble in pain."""
+        And as you think it is too late you hear a little hiss.
+        
+        The solution has stopped doing anything."""
+
+        player_thinking "Huh? {w} That's all?"
 
     menu:
         "Leave through the northern door.":

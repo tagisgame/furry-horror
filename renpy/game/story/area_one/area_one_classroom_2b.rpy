@@ -7,11 +7,11 @@ label area_one_Classroom_2B:
     scene bg areaone classroom
 
     if not vb_a1_cls_2b_visited:
-        $ vb_a1_cls_1b_visited = True
+        $ vb_a1_cls_2b_visited = True
 
         narrator """You enter one of many classrooms in this school.
 
-        Weirdly enough the windows are bricked up, yet you remeber that once or twice you sneaked from the school through them. 
+        Weirdly enough the windows are bricked up, yet you remember that once or twice you sneaked from the school through them. 
 
         The teacher's chairs seems to be broken. There are some parts laying on the ground."""
 
@@ -23,11 +23,17 @@ label area_one_Classroom_2B:
         
         narrator  """At the back of the class you see several cabinets. They seem to contain inessential for you items.
 
-        On the walls you can see posters with mathematic equations. You shudder as you are remembered by them about math.
+        On the walls you can see posters with mathematic equations. You shudder as they made you remember about math.
 
-        All you can remember is that if you don't remember what to do you count discriminant.
+        All you can remember is that if you don't remember what to do \"you are discriminant\".
 
         Apart from that the class seems to be properly cleaned, everything but teacher's chair is in it's place"""
+
+        menu:
+            "Check the chair.":
+                jump area_one_Classroom_2B_CheckChair
+            "Leave.":
+                jump area_one_Corridor_Toilets2B
 
     elif not vb_a1_cls_2b_chair_checked:
         narrator """An ordinary classroom that reminds you of countless hours spent pretending to be a diligent student.

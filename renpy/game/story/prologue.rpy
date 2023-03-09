@@ -7,7 +7,7 @@ label prologue_start:
     
     scene bg prologue gym
 
-    player_thinking "I stared blankly at the colorful costiumes of the actors on the stage. I could not help but stare with dread at their 'cute' faces..."
+    player_thinking "I stared blankly at the colorful costumes of the actors on the stage. I could not help but stare with dread at their 'cute' faces..."
 
     narrator """
     Fox represents trickery and deceit. His ability to shapeshift into anything or anyone he desires may deceive even the best observers.
@@ -18,13 +18,13 @@ label prologue_start:
 
     narrator "Weasel, who is believed to trip people. Actually, there are two more of them: one of which wounds you and the other heals you."
 
-    player_thinking "'Course, they had to choose the deadliest one... As if their bare existance wasn't enough."
+    player_thinking "'Course, they had to choose the deadliest one... As if their bare existence wasn't enough."
 
-    narrator "Wolf being the one of the protective spirits that deters malicious ghosts, but will turn on you the moment you make a mistake."
+    narrator "Wolf being one of the protective spirits that deters malicious ghosts, but will turn on you the moment you make a mistake."
 
     player_thinking """I wonder how people find these costumes cute... or anything. Anything besides frightening.
 
-    If I were to stand close to that terrifying abominations I would probably die of a heart attack...
+    If I were to stand close to those terrifying abominations I would probably die of a heart attack...
 
     Just thinking about their fur gives me the shivers."""
 
@@ -67,7 +67,7 @@ label prologue_start:
 
     player_thinking "Did I just... Did I just yell? What the hell was that?! Have others seen it too?"
 
-    narrator "You start sweating after you realised that you cought the attention of students around you."
+    narrator "You start sweating after you realised that you caught the attention of students around you."
 
     player_thinking "I gotta hide. I need to take a breather."
 
@@ -78,14 +78,14 @@ label prologue_start:
     jump prologue_hallway
 
 label prologue_hallway:
-    scene bg prologue hallway
+    scene bg prologue corridor
     with fade
 
     narrator """You are wandering the hallway that, despite the ongoing show, is crowded with people.
 
-    Those people seem to be interested in your person and you can feel thier piercing eyes on you.
+    Those people seem to be interested in your person and you can feel their piercing eyes on you.
 
-    However, everyone is occupied with their struggles, noone glances at you.
+    However, everyone is occupied with their struggles, no one glances at you.
 
     Despite all that you try to pass the hallway without attracting any attention as you are terrified of their deadly stares.
 
@@ -93,7 +93,7 @@ label prologue_hallway:
 
     student1 "My beloved father presented us with another domestic violence show last night. Damn drunk..."
 
-    student2 "Such behavior is inappropriate! He should consider his acctions and you should talk to him about that!"
+    student2 "Such behavior is inappropriate! He should consider his actions and you should talk to him about that!"
 
     student1 """I do not intend to speak to him anymore. And he'll have enough time to think while he rots in jail!
 
@@ -120,7 +120,7 @@ label prologue_toilets:
 
     player_thinking """Those furry costumes... There is someting unsettling about them. I can't explain it tho...
 
-    People say that they look cute, some even fantasize about them... Bleh...
+    People say that they look cute, some even fantasise about them... Bleh...
 
     How people can say things like that?! Those are bloodthirsty monsters!"""
 
@@ -128,7 +128,7 @@ label prologue_toilets:
 
     player_thinking """I need to get out! I can't stand this shit I need to get home and relax.
 
-    But what will people think? They certainly will talk behind my back. They will call me coward!
+    But what will people think? They certainly will talk behind my back. They will call me a coward!
 
     Screw those people! What if the actors are on break and I'll bump into one of them wearing his suit?!
 

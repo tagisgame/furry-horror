@@ -23,14 +23,14 @@ label area_one_Classroom_2A:
     else:
         narrator "You enter a classroom beautifully decorated with various flowers."
 
-    if not vb_item_cabinetkey:
+    if not vb_item_1bkey:
         if not vb_a1_cls_3b_skeleton_examined:
             player_thinking """Hmm I don't want to get my hands dirty...
 
             There probably isn't even a thing worth my time"""
 
         else:
-            $ vb_item_cabinetkey = True
+            $ vb_item_1bkey = True
             player_thinking """If I remember correctly, there is a key hidden in one of the flowers...
 
             Now, which one would it be?"""
@@ -43,9 +43,9 @@ label area_one_Classroom_2A:
 
             And it so happened that the last pot you checked, the one that's the closest to the teacher's desk had a key, waiting there on the soil."""
     else:
-        narrator "It was here where you found a key to a cabinet in 1B."
+        narrator "It was here where you found a {b}key to a cabinet in 1B{/b}."
 
-    narrator "There is a entrance to classroom 1A."
+    narrator "There is an entrance to classroom 1A."
 
     menu:
         "Leave.":
