@@ -110,7 +110,7 @@ label area_two_Classroom_Gym_Monster:
     $ vb_a2_cls_gym_visited = False
     $ vb_item_janitorKey = False
 
-     menu:
+    menu:
         "Revert my decision.":
             jump area_two_Classroom_1G
         "Start over.":

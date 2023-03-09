@@ -48,14 +48,14 @@ label area_one_Corridor_AreatwoAreathree4B:
 
         narrator """Fortunately, you have a flashlight with which you can dispel the darkness.
         
-        To the east there is a corridor leading to the gym.
+        To the west there is a corridor leading to the gym.
         
         Opposite to this is the entrance to the room 4B."""
 
         menu:
             "Go south.":
                 jump area_one_Corridor_3A3B
-            "Go east.":
+            "Go west.":
                 jump area_one_Corridor_GymEntrance
             "Enter classroom 4B.":
                 jump area_one_Classroom_4B
